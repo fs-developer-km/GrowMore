@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from html.awaikenthemes.com/repairit/project-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Apr 2026 18:38:58 GMT -->
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Awaiken">
+    <!-- Page Title -->
+    <title>Repairit - Mobile & Computer Repair Services HTML Template</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&amp;display=swap" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- SlickNav Css -->
+    <link href="css/slicknav.min.css" rel="stylesheet">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Font Awesome Icon Css-->
+    <link href="css/all.min.css" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="css/mousecursor.css">
+    <!-- Main Custom Css -->
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+
+    <style>
+        /* ── Dynamic service info in sidebar ── */
+        #gsd-price-bar {
+            background: #FFD268;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 0;
+        }
+
+        #gsd-price-bar .gsd-price {
+            font-size: 26px;
+            font-weight: 800;
+            color: #081D0D;
+        }
+
+        #gsd-price-bar .gsd-price-note {
+            font-size: 11px;
+            color: rgba(8, 29, 13, 0.6);
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Book button */
+        #gsd-book-btn {
+            display: block;
+            width: 100%;
+            background: #081D0D;
+            color: #FFD268;
+            border: none;
+            padding: 14px 20px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            letter-spacing: 0.3px;
+            margin-top: 16px;
+            border-radius: 8px;
+            transition: opacity 0.2s;
+        }
+
+        #gsd-book-btn:hover {
+            opacity: 0.88;
+        }
+
+        /* WhatsApp button */
+        #gsd-wa-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: transparent;
+            border: 2px solid #081D0D;
+            color: #081D0D;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        #gsd-wa-btn:hover {
+            background: #081D0D;
+            color: #FFD268;
+        }
+
+        #gsd-wa-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #25d366;
+            flex-shrink: 0;
+        }
+
+        /* ── Booking Popup ── */
+        #gsdBookOverlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(8, 29, 13, 0.7);
+            z-index: 999999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #gsdBookOverlay.gsd-open {
+            display: flex;
+        }
+
+        #gsdBookBox {
+            background: #fff;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 500px;
+            overflow: hidden;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
+            animation: gsdSlide 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        @keyframes gsdSlide {
+            from {
+                opacity: 0;
+                transform: translateY(32px) scale(0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .gsd-popup-head {
+            background: #081D0D;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .gsd-popup-head-title {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .gsd-popup-head-sub {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        .gsd-popup-close {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .gsd-popup-close:hover {
+            background: rgba(255, 210, 104, 0.25);
+            color: #FFD268;
+        }
+
+        .gsd-popup-body {
+            padding: 20px 24px 8px;
+        }
+
+        .gsd-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #fffbe6;
+            border: 1.5px solid #FFD268;
+            color: #081D0D;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+
+        .gsd-f-row {
+            margin-bottom: 13px;
+        }
+
+        .gsd-f-row label {
+            display: block;
+            font-size: 10px;
+            font-weight: 700;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            margin-bottom: 4px;
+        }
+
+        .gsd-f-row input,
+        .gsd-f-row select,
+        .gsd-f-row textarea {
+            width: 100%;
+            padding: 9px 12px;
+            border: 1.5px solid #e5e2da;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #081D0D;
+            background: #fafaf8;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .gsd-f-row textarea {
+            height: 64px;
+            resize: none;
+        }
+
+        .gsd-f-row input:focus,
+        .gsd-f-row select:focus,
+        .gsd-f-row textarea:focus {
+            border-color: #FFD268;
+        }
+
+        .gsd-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .gsd-popup-footer {
+            padding: 14px 24px;
+            border-top: 1px solid #f0ece6;
+            display: flex;
+            gap: 10px;
+        }
+
+        .gsd-btn-submit {
+            flex: 1;
+            background: #FFD268;
+            color: #081D0D;
+            border: none;
+            border-radius: 50px;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .gsd-btn-submit:hover {
+            opacity: 0.88;
+        }
+
+        .gsd-btn-cancel {
+            background: transparent;
+            border: 1.5px solid #e5e2da;
+            color: #888;
+            border-radius: 50px;
+            padding: 12px 18px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon"><img src="images/loader.svg" alt=""></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Start -->
+    <header class="main-header">
+        <div class="header-sticky">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <!-- Logo Start -->
+                    <a class="navbar-brand" href="index-2.html">
+                        <img src="images/logo.svg" alt="Logo">
+                    </a>
+                    <!-- Logo End -->
+
+                    <!-- Main Menu Start -->
+                    <div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item submenu"><a class="nav-link" href="index-2.html">Home</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link" href="index.html">Home - Main</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="index-image.html">Home -
+                                                Image</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="index-video.html">Home -
+                                                Video</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="index-slider.html">Home -
+                                                Slider</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link" href="service-single.html">Service
+                                                Details</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog
+                                                Details</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="project-single.html">Project
+                                                Details</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="team-single.html">Team
+                                                Details</a></li>
+                                        <li class="nav-item"><a class="nav-link"
+                                                href="testimonials.html">Testimonials</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="image-gallery.html">Image
+                                                Gallery</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="video-gallery.html">Video
+                                                Gallery</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Header Btn Start -->
+                        <div class="header-btn">
+                            <a href="contact.html" class="btn-default btn-highlighted">Request a Free Quote</a>
+                        </div>
+                        <!-- Header Btn End -->
+                    </div>
+                    <!-- Main Menu End -->
+                    <div class="navbar-toggle"></div>
+                </div>
+            </nav>
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Page Header Start -->
+    <div class="page-header dark-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="text-anime-style-3" data-cursor="-opaque">Data Recovery and Backup ...</h1>
+                        <nav class="wow fadeInUp">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index-2.html">home</a></li>
+                                <li class="breadcrumb-item"><a href="projects.html">projects</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Data Recovery and Backup ...</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Page Project Single Start -->
+    <div class="page-project-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- Page Single Sidebar Start -->
+                    <div class="page-single-sidebar">
+                        <!-- Project Category List Start -->
+                        <div class="project-category wow fadeInUp">
+                            <!-- Page Category List Start -->
+                            <div class="project-category-list">
+                                <h3>Project information</h3>
+                                <!--  SIDEBAR DYNAMIC CONTENT — paste inside .project-category-list  -->
+                                <div id="gsd-price-bar">
+                                    <div>
+                                        <div
+                                            style="font-size:10px;font-weight:700;color:rgba(8,29,13,0.55);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;">
+                                            Service Charge</div>
+                                        <div class="gsd-price" id="gsdPrice">₹—</div>
+                                    </div>
+                                    <div class="gsd-price-note">Labour only<br>Parts extra if needed</div>
+                                </div>
+
+                                <ul id="gsdInfoList">
+                                    <li>Service: <span id="gsdService">—</span></li>
+                                    <li>Category: <span id="gsdCategory">—</span></li>
+                                    <li>Duration: <span id="gsdDuration">—</span></li>
+                                    <li>Warranty: <span id="gsdWarranty">—</span></li>
+                                    <li>Location: <span id="gsdLocation">—</span></li>
+                                </ul>
+
+                                <button id="gsd-book-btn" onclick="gsdOpenBooking()">
+                                    &#128197; Book This Service
+                                </button>
+                                <button id="gsd-wa-btn" onclick="gsdWhatsApp()">
+                                    <div id="gsd-wa-dot"></div> Chat on WhatsApp
+                                </button>
+
+                                <img id="gsdMainImage" src="images/project-2.jpg" alt="Service Image"
+                                    style="margin-top: 13px;">
+                                <!-- <ul>
+                                    <li>client: <span>Daniel lee</span></li>
+                                    <li>category: <span>Laptop & mobile repair</span></li>
+                                    <li>location: <span>Mumbai, India</span></li>
+                                    <li>duration : <span>3 weeks</span></li>
+                                    <li>date: <span>15 March, 2025</span></li>
+                                </ul> -->
+                            </div>
+                            <!-- Page Category List End -->
+
+                            <!-- Category Social Link Start -->
+                            <div class="category-social-link">
+                                <span>Share:</span>
+                                <ul>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- Category Social Link End -->
+                        </div>
+                        <!-- Project Category List End -->
+
+                        <!-- Sidebar CTA Box Start -->
+                        <div class="faqs-review-box sidebar-cta-box">
+                            <!-- FAQs Review Body Start -->
+                            <div class="faqs-review-body">
+                                <!-- Review Rating Box Start -->
+                                <div class="review-rating-box">
+                                    <h2><span class="counter">4.9</span></h2>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <!-- Review Rating Box End -->
+
+                                <!-- Review Client Box Start -->
+                                <div class="hero-client-box">
+                                    <!-- Review Image Start -->
+                                    <div class="customer-images">
+                                        <div class="customer-img">
+                                            <figure class="image-anime reveal">
+                                                <img src="images/author-1.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="customer-img">
+                                            <figure class="image-anime reveal">
+                                                <img src="images/author-2.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="customer-img">
+                                            <figure class="image-anime reveal">
+                                                <img src="images/author-3.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="customer-img">
+                                            <figure class="image-anime reveal">
+                                                <img src="images/author-4.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <!-- Testimonial Review Image End -->
+
+                                    <!-- Hero Client Content Start -->
+                                    <div class="hero-client-content">
+                                        <p>Our Customer Review</p>
+                                    </div>
+                                    <!-- Hero Client Content End -->
+                                </div>
+                                <!-- Review Client Box End -->
+                            </div>
+                            <!-- FAQs Review Body End -->
+
+                            <!-- FAQs Review Footer Start -->
+                            <div class="faqs-review-footer">
+                                <a href="tel:+125125025"><i class="fa-solid fa-phone"></i> +91 - 9891010353</a>
+                            </div>
+                            <!-- FAQs Review Footer End -->
+                        </div>
+                        <!-- Sidebar CTA Box End -->
+                    </div>
+                    <!-- Page Single Sidebar End -->
+                </div>
+
+                <div class="col-lg-8">
+                    <!-- Project Single Content Start -->
+                    <div class="project-single-contemt">
+                        <!-- Page Single Image Start -->
+                        <div class="page-single-image">
+                            <figure class="image-anime reveal">
+                                <img id="gsdMainImage2" src="images/project-2.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- Page Single Image End -->
+
+                        <!-- Project Entry Start -->
+                        <div class="project-entry">
+                            <p class="wow fadeInUp" id="gsdDesc1">Is your device not holding a charge like it used to?
+                                Over time,
+                                laptop and phone batteries lose their efficiency, leading to frequent charging and
+                                sudden shutdowns. Our expert battery replacement service ensures that your devices
+                                regain their original performance and stay powered throughout the day. We use
+                                high-quality, compatible batteries to guarantee long-lasting results and optimal safety.
+                            </p>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s" id="gsdDesc2">Whether you own an iPhone,
+                                Android device,
+                                MacBook, or Windows laptop, our technicians are trained to handle replacements with
+                                precision. Quick turnaround, affordable pricing, and reliable service make us the go-to
+                                choice for battery issues. Let us bring your device back to life with a new, durable
+                                battery you can count on.</p>
+
+                            <!-- Project Overview Box Start -->
+                            <div class="project-overview-box">
+                                <h2 class="text-anime-style-3">Repair process overview</h2>
+                                <p class="wow fadeInUp" data-wow-delay="0.4s" id="gsdDesc3">Get an inside look at how we handled the
+                                    repair—from initial diagnostics to final testing. Our step-by-step approach ensures
+                                    transparency, efficiency, and quality service at every stage of the project.</p>
+
+                                <ul class="wow fadeInUp" data-wow-delay="0.6s" id="gsdStepsList">
+                                    <li>Our expert technicians are trained to handle complex repairs for all major
+                                        laptop and mobile.</li>
+                                    <li>We prioritize quality by using only genuine high-performance replacement part
+                                        that guarantee long-lasting.</li>
+                                    <li>We believe in honest service—our pricing is upfront, competitive, and includes
+                                        everything.</li>
+                                </ul>
+
+                                <!-- Project Entry Video Content Start -->
+                                <div class="project-entry-video-content">
+                                    <!-- Project Entry Video Start -->
+                                    <div class="project-entry-video">
+                                        <figure class="image-anime">
+                                            <img src="images/project-entry-video-image.jpg" alt="">
+                                        </figure>
+
+                                        <!-- Video Play Button Start -->
+                                        <div class="video-play-button">
+                                            <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
+                                                data-cursor-text="Play">
+                                                <i class="fa-solid fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <!-- Video Play Button End -->
+                                    </div>
+                                    <!-- Project Entry Video End -->
+
+                                    <!-- Project Entry Content Start -->
+                                    <div class="project-entry-content">
+                                        <h3>Regular software updates are essential for protecting your device from
+                                            security.</h3>
+                                        <ul>
+                                            <li>High-quality replacement part</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Project Entry Content End -->
+                                </div>
+                                <!-- Project Entry Video Content End -->
+                            </div>
+                            <!-- Project Overview Box En -->
+
+                            <!-- Project Solution Box Start -->
+                            <div class="project-solution-box">
+                                <h2 class="text-anime-style-3">Project challange & solution</h2>
+                                <p class="wow fadeInUp">Get an inside look at how we handled the repair—from initial
+                                    diagnostics to final testing. Our step-by-step approach ensures transparency,
+                                    efficiency, </p>
+
+                                <!-- Project Solution Image Content Start -->
+                                <div class="project-solution-image-conetnt">
+                                    <!-- Project Solution Content Start -->
+                                    <div class="project-solution-conetnt">
+                                        <!-- About Body Item Start -->
+                                        <div class="about-body-item wow fadeInUp" data-wow-delay="0.2s">
+                                            <div class="icon-box">
+                                                <img src="images/icon-about-body-1.svg" alt="">
+                                            </div>
+                                            <div class="about-body-title">
+                                                <h3>Experience fast and reliable service you can count.</h3>
+                                            </div>
+                                        </div>
+                                        <!-- About Body Item End -->
+
+                                        <!-- About Body Item Start -->
+                                        <div class="about-body-item wow fadeInUp" data-wow-delay="0.4s">
+                                            <div class="icon-box">
+                                                <img src="images/icon-about-body-2.svg" alt="">
+                                            </div>
+                                            <div class="about-body-title">
+                                                <h3>Count on us for quick trusted expertise every time.</h3>
+                                            </div>
+                                        </div>
+                                        <!-- About Body Item End -->
+                                    </div>
+                                    <!-- Project Solution Content End -->
+
+                                    <!-- Project Solution Image Start -->
+                                    <div class="project-solution-image">
+                                        <figure class="image-anime reveal">
+                                            <img src="images/project-solution-img.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <!-- Project Solution Image End -->
+                                </div>
+                                <!-- Project Solution Image Content End -->
+
+                                <!-- Project Challenge List Start -->
+                                <div class="project-challenge-list wow fadeInUp" data-wow-delay="0.6s">
+                                    <!-- Excellence Item Start -->
+                                    <div class="excellence-item">
+                                        <div class="icon-box">
+                                            <img src="images/icon-excellence-1.svg" alt="">
+                                        </div>
+                                        <div class="excellence-item-content">
+                                            <h3>Project Challenge</h3>
+                                            <p>Skilled experts handling every device with care and accuracy.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Excellence Item End -->
+
+                                    <!-- Excellence Item Start -->
+                                    <div class="excellence-item">
+                                        <div class="icon-box">
+                                            <img src="images/icon-excellence-2.svg" alt="">
+                                        </div>
+                                        <div class="excellence-item-content">
+                                            <h3>Project Solution</h3>
+                                            <p>Repairs tailored to your device's unique needs and usage.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Excellence Item End -->
+                                </div>
+                                <!-- Project Challenge List End -->
+                            </div>
+                            <!-- Project Solution Box End -->
+
+                            <!-- Project Expert Box Start -->
+                            <div class="project-expert-box">
+                                <h2 class="text-anime-style-3">Expert support you can trust</h2>
+                                <p class="wow fadeInUp">Whether it's a minor glitch or a major breakdown, our skilled
+                                    technicians are here to provide reliable, fast, and expert support for all your
+                                    devices. We're committed to delivering solutions that last & service you can rely
+                                    on.</p>
+
+                                <ul class="wow fadeInUp" data-wow-delay="0.2s">
+                                    <li>All-in-one privacy protection solution</li>
+                                    <li>Advanced security for your digital world</li>
+                                    <li>End-to-end protection personal device</li>
+                                    <li>Secure your device with trusted privacy</li>
+                                </ul>
+                            </div>
+                            <!-- Project Expert Box End -->
+                        </div>
+                        <!-- Project Entry End -->
+
+                        <!-- Page Single FAQs Start -->
+                        <div class="page-single-faqs">
+                            <!-- Section Title Start -->
+                            <div class="section-title">
+                                <h2 class="wow fadeInUp" data-cursor="-opaque">Frequently asked questions</h2>
+                            </div>
+                            <!-- Section Title End -->
+
+                            <!-- FAQ Accordion Start -->
+                            <div class="faq-accordion page-faq-accordion" id="faqaccordion">
+                                <!-- FAQ Item Start -->
+                                <div class="accordion-item wow fadeInUp">
+                                    <h2 class="accordion-header" id="heading1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true"
+                                            aria-controls="collapse1">
+                                            What types of treatments do you offer?
+                                        </button>
+                                    </h2>
+                                    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                        data-bs-parent="#faqaccordion">
+                                        <div class="accordion-body">
+                                            <p>We offer a wide range of dermatology treatments, including acne care,
+                                                psoriasis management, skin cancer screening, cosmetic procedures like
+                                                Botox etc.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item End -->
+
+                                <!-- FAQ Item Start -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                                    <h2 class="accordion-header" id="heading2">
+                                        <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                            Do I need a consultation before getting treatment?
+                                        </button>
+                                    </h2>
+                                    <div id="collapse2" class="accordion-collapse collapse show"
+                                        aria-labelledby="heading2" data-bs-parent="#faqaccordion">
+                                        <div class="accordion-body">
+                                            <p>We offer a wide range of dermatology treatments, including acne care,
+                                                psoriasis management, skin cancer screening, cosmetic procedures like
+                                                Botox etc.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item End -->
+
+                                <!-- FAQ Item Start -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                                    <h2 class="accordion-header" id="heading3">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false"
+                                            aria-controls="collapse3">
+                                            Are your treatments suitable for all skin types?
+                                        </button>
+                                    </h2>
+                                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                                        data-bs-parent="#faqaccordion">
+                                        <div class="accordion-body">
+                                            <p>We offer a wide range of dermatology treatments, including acne care,
+                                                psoriasis management, skin cancer screening, cosmetic procedures like
+                                                Botox etc.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item End -->
+
+                                <!-- FAQ Item Start -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
+                                    <h2 class="accordion-header" id="heading4">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
+                                            aria-controls="collapse4">
+                                            Do you offer cosmetic dermatology services?
+                                        </button>
+                                    </h2>
+                                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                                        data-bs-parent="#faqaccordion">
+                                        <div class="accordion-body">
+                                            <p>We offer a wide range of dermatology treatments, including acne care,
+                                                psoriasis management, skin cancer screening, cosmetic procedures like
+                                                Botox etc.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item End -->
+
+                                <!-- FAQ Item Start -->
+                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
+                                    <h2 class="accordion-header" id="heading5">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false"
+                                            aria-controls="collapse5">
+                                            What should I expect during my first visit?
+                                        </button>
+                                    </h2>
+                                    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                                        data-bs-parent="#faqaccordion">
+                                        <div class="accordion-body">
+                                            <p>We offer a wide range of dermatology treatments, including acne care,
+                                                psoriasis management, skin cancer screening, cosmetic procedures like
+                                                Botox etc.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item End -->
+                            </div>
+                            <!-- FAQ Accordion End -->
+                        </div>
+                        <!-- Page Single FAQs End -->
+                    </div>
+                    <!-- Project Single Content Start -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- popup for book service -->
+
+
+    <!-- ================================================================
+   STEP 4: POPUP HTML — paste just before </body> tag
+================================================================ -->
+    <div id="gsdBookOverlay">
+        <div id="gsdBookBox">
+            <div class="gsd-popup-head">
+                <div>
+                    <div class="gsd-popup-head-title">Book a Service</div>
+                    <div class="gsd-popup-head-sub">Details WhatsApp pe jayenge</div>
+                </div>
+                <button class="gsd-popup-close" onclick="gsdCloseBooking()">&#x2715;</button>
+            </div>
+            <div class="gsd-popup-body">
+                <div class="gsd-chip" id="gsdChip">Service — ₹—</div>
+                <div class="gsd-2col">
+                    <div class="gsd-f-row">
+                        <label>Your name</label>
+                        <input id="gsdName" type="text" placeholder="Rahul Sharma">
+                    </div>
+                    <div class="gsd-f-row">
+                        <label>Phone number</label>
+                        <input id="gsdPhone" type="tel" placeholder="+91 98765 43210">
+                    </div>
+                </div>
+                <div class="gsd-f-row">
+                    <label>Full address</label>
+                    <input id="gsdAddress" type="text" placeholder="House no, Street, Area, City">
+                </div>
+                <div class="gsd-2col">
+                    <div class="gsd-f-row">
+                        <label>Preferred date</label>
+                        <input id="gsdDate" type="date">
+                    </div>
+                    <div class="gsd-f-row">
+                        <label>Time slot</label>
+                        <select id="gsdTime">
+                            <option>Morning (9 AM – 12 PM)</option>
+                            <option>Afternoon (12 PM – 4 PM)</option>
+                            <option>Evening (4 PM – 7 PM)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="gsd-f-row">
+                    <label>Extra note (optional)</label>
+                    <textarea id="gsdNote" placeholder="Any specific issue or instruction..."></textarea>
+                </div>
+            </div>
+            <div class="gsd-popup-footer">
+                <button class="gsd-btn-cancel" onclick="gsdCloseBooking()">Cancel</button>
+                <button class="gsd-btn-submit" onclick="gsdSendWhatsApp()">
+                    Send via WhatsApp &#8594;
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="services-data.js"></script>
+    <script>
+        (function () {
+
+            /* ── Read URL param ── */
+            var params = new URLSearchParams(window.location.search);
+            var key = params.get('service');
+            var svc = key && GMA_SERVICES[key] ? GMA_SERVICES[key] : null;
+
+            if (!svc) {
+                /* No param — show default / static content, hide price bar */
+                var pb = document.getElementById('gsd-price-bar');
+                if (pb) pb.style.display = 'none';
+                return;
+            }
+
+            /* ── Inject sidebar info ── */
+            setText('gsdPrice', svc.price);
+            setText('gsdService', svc.title);
+            setText('gsdCategory', svc.category);
+            setText('gsdDuration', svc.duration);
+            setText('gsdWarranty', svc.warranty);
+            setText('gsdLocation', svc.location);
+
+            /* ── Inject main image ── */
+            var img = document.getElementById('gsdMainImage');
+            if (img) { img.src = svc.image; img.alt = svc.title; }
+
+            /* ── Inject col-lg-8 main image bhi ── */
+            var img2 = document.getElementById('gsdMainImage2');
+            if (img2) { img2.src = svc.image; img2.alt = svc.title; }
+
+            /* ── Inject page header h1 (breadcrumb) ── */
+            var h1s = document.querySelectorAll('.page-header-box h1, .text-anime-style-3');
+            if (h1s.length) h1s[0].textContent = svc.title;
+
+            /* ── Inject breadcrumb last item ── */
+            var bc = document.querySelector('.breadcrumb-item.active');
+            if (bc) bc.textContent = svc.title;
+
+            /* ── Chip for popup ── */
+            setText('gsdChip', svc.title + ' — ' + svc.price);
+
+            /* desc1 */
+            var d1 = document.getElementById('gsdDesc1');
+            if (d1) d1.textContent = svc.desc1;
+
+            /* desc2 */
+            var d2 = document.getElementById('gsdDesc2');
+            if (d2) d2.textContent = svc.desc2;
+
+             /* desc2 */
+            var d3 = document.getElementById('gsdDesc3');
+            if (d3) d3.textContent = svc.repairandprocess;
+
+
+            /* steps */
+            var sl = document.getElementById('gsdStepsList');
+            if (sl && svc.steps) {
+                sl.innerHTML = svc.steps.map(function (s) {
+                    return '<li><strong>' + s.name + '</strong> — ' + s.desc + '</li>';
+                }).join('');
+            }
+
+            /* ── Store globally for popup ── */
+            window._gsdSvc = svc;
+
+            function setText(id, val) {
+                var el = document.getElementById(id);
+                if (el) el.textContent = val;
+            }
+
+        })();
+
+        /* ── Booking popup open/close ── */
+        function gsdOpenBooking() {
+            document.getElementById('gsdBookOverlay').classList.add('gsd-open');
+            document.body.style.overflow = 'hidden';
+        }
+        function gsdCloseBooking() {
+            document.getElementById('gsdBookOverlay').classList.remove('gsd-open');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('gsdBookOverlay').addEventListener('click', function (e) {
+            if (e.target === this) gsdCloseBooking();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') gsdCloseBooking();
+        });
+
+        /* ── Send via WhatsApp ── */
+        function gsdSendWhatsApp() {
+            var svc = window._gsdSvc || {};
+            var name = document.getElementById('gsdName').value.trim();
+            var phone = document.getElementById('gsdPhone').value.trim();
+            var address = document.getElementById('gsdAddress').value.trim();
+            var date = document.getElementById('gsdDate').value;
+            var time = document.getElementById('gsdTime').value;
+            var note = document.getElementById('gsdNote').value.trim();
+
+            if (!name || !phone || !address) {
+                alert('Please fill Name, Phone and Address before sending.');
+                return;
+            }
+
+            var msg = '*New Service Booking — GrowMore Appliance*\n\n'
+                + '*Service:* ' + (svc.title || '—') + '\n'
+                + '*Price:* ' + (svc.price || '—') + '\n'
+                + '*Category:* ' + (svc.category || '—') + '\n\n'
+                + '*Customer Details:*\n'
+                + 'Name: ' + name + '\n'
+                + 'Phone: ' + phone + '\n'
+                + 'Address: ' + address + '\n'
+                + 'Date: ' + (date || 'Not specified') + '\n'
+                + 'Time: ' + time + '\n'
+                + (note ? 'Note: ' + note : '');
+
+            /* ← apna WhatsApp number dalo (country code ke saath, no +, no spaces) */
+            var waNumber = '919876543210';
+            var url = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(msg);
+            window.open(url, '_blank');
+        }
+
+        /* ── Direct WhatsApp button ── */
+        function gsdWhatsApp() {
+            var svc = window._gsdSvc || {};
+            var msg = 'Hello! I want to inquire about: *' + (svc.title || 'your service') + '*';
+            var waNumber = '919876543210'; /* ← same number dalo */
+            window.open('https://wa.me/' + waNumber + '?text=' + encodeURIComponent(msg), '_blank');
+        }
+    </script>
+
+    <!-- Footer Main Start -->
+    <footer class="main-footer dark-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Footer Header start -->
+                    <div class="footer-header">
+                        <!-- About Footer Start -->
+                        <div class="about-footer order-1">
+                            <!-- Footer Logo Start -->
+                            <div class="footer-logo">
+                                <img src="images/footer-logo.svg" alt="">
+                            </div>
+                            <!-- Footer Logo End -->
+
+                            <!-- About Footer Content Start -->
+                            <div class="about-footer-content">
+                                <p>Your trusted partner for expert device repairs. We provide fast, affordable repair
+                                    services.</p>
+                            </div>
+                            <!-- About Footer Content End -->
+                        </div>
+                        <!-- About Footer End -->
+
+                        <!-- Footer Contact Box Start -->
+                        <div class="footer-contact-box order-lg-2  order-md-2  order-3">
+                            <!-- Footer Contact Item Start -->
+                            <div class="footer-contact-item">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="footer-contact-item-content">
+                                    <h3>Location:</h3>
+                                    <p>2972 Westheimer Rd. Santa Ana, New York, USA</p>
+                                </div>
+                            </div>
+                            <!-- Footer Contact Item End -->
+                        </div>
+                        <!-- Footer Contact Box End -->
+
+                        <!-- Footer Social Links Start -->
+                        <div class="footer-social-links order-lg-3  order-md-3  order-2">
+                            <span>Follow Our On:</span>
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer Social Links End -->
+                    </div>
+                    <!-- Footer Header End -->
+                </div>
+
+                <div class="col-lg-3 col-md-5">
+                    <!-- Footer Contact Box Start -->
+                    <div class="footer-contact-box">
+                        <!-- Footer Contact Item Start -->
+                        <div class="footer-contact-item">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="footer-contact-item-content">
+                                <h3>Urgent Support?</h3>
+                                <p><a href="tel:+123465789">+91 9891010353</a></p>
+                            </div>
+                        </div>
+                        <!-- Footer Contact Item End -->
+
+                        <!-- Footer Contact Item Start -->
+                        <div class="footer-contact-item">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="footer-contact-item-content">
+                                <h3>E-mail Us</h3>
+                                <p><a href="mailto:info@domainname.com">info@domainname.com</a></p>
+                            </div>
+                        </div>
+                        <!-- Footer Contact Item End -->
+                    </div>
+                    <!-- Footer Contact Box End -->
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-6">
+                    <!-- Footer Links Start -->
+                    <div class="footer-links quick-links">
+                        <h3>quick links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="services.html">services</a></li>
+                            <li><a href="contact.html">contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- Footer Links End -->
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <!-- Footer Links Start -->
+                    <div class="footer-links">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><a href="service-single.html">Computer & Mobile Repair</a></li>
+                            <li><a href="service-single.html">Battery Replacement</a></li>
+                            <li><a href="service-single.html">Water Damage Repair</a></li>
+                            <li><a href="service-single.html">Custom PC Builds</a></li>
+                        </ul>
+                    </div>
+                    <!-- Footer Links End -->
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <!-- Footer Newsletter Box Start -->
+                    <div class="footer-newsletter-box footer-links">
+                        <h3>Subscribe Our Newsletter</h3>
+                        <!-- Newsletter Form start -->
+                        <div class="newsletter-form">
+                            <form id="newsletterForm" action="#" method="POST">
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" id="mail"
+                                        placeholder="Your Email" required="">
+                                    <button type="submit" class="btn-default btn-highlighted">subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Newsletter Form end -->
+                        <p>*Stay updated with the latest HR trends expert tips insights your inbox.</p>
+                    </div>
+                    <!-- Footer Newsletter Box End -->
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Footer Copyright Text Start -->
+                    <div class="footer-copyright-text">
+                        <p>Copyright © 2025 All Rights Reserved.</p>
+                    </div>
+                    <!-- Footer Copyright Text End -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Main End -->
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Isotop js file -->
+    <script src="js/isotope.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+</body>
+
+<!-- Mirrored from html.awaikenthemes.com/repairit/project-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Apr 2026 18:38:59 GMT -->
+
+</html>
