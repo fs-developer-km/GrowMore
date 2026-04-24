@@ -965,7 +965,9 @@ header.main-header .header-sticky.active{
 
 .hero-image figure img{
 	width: 100%;
-	aspect-ratio: 1 / 1.344;
+	/* aspect-ratio: 1 / 1.344; */
+	aspect-ratio: auto;
+
 	object-fit: cover;
 }
 
@@ -6666,4 +6668,23 @@ header.main-header .header-sticky.active{
     .google-map-iframe iframe{
         height: 350px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* extrra css */
+
+@media (min-width: 992px) {
+  .desktop-only-space{
+    margin-top: 0;
+    padding-top: 0px;
+  }
 }
