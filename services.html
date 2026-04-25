@@ -2,42 +2,731 @@
 <html lang="zxx">
 
 <!-- Mirrored from html.awaikenthemes.com/repairit/services.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Apr 2026 18:38:55 GMT -->
+
 <head>
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="Awaiken">
-	<!-- Page Title -->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Awaiken">
+    <!-- Page Title -->
     <title>Repairit - Mobile & Computer Repair Services HTML Template</title>
-	<!-- Favicon Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-	<!-- Google Fonts Css-->
-	<link rel="preconnect" href="https://fonts.googleapis.com/">
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&amp;display=swap" rel="stylesheet">
-	<!-- Bootstrap Css -->
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<!-- SlickNav Css -->
-	<link href="css/slicknav.min.css" rel="stylesheet">
-	<!-- Swiper Css -->
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<!-- Font Awesome Icon Css-->
-	<link href="css/all.min.css" rel="stylesheet" media="screen">
-	<!-- Animated Css -->
-	<link href="css/animate.css" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- SlickNav Css -->
+    <link href="css/slicknav.min.css" rel="stylesheet">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Font Awesome Icon Css-->
+    <link href="css/all.min.css" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet">
     <!-- Magnific Popup Core Css File -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<!-- Mouse Cursor Css File -->
-	<link rel="stylesheet" href="css/mousecursor.css">
-	<!-- Main Custom Css -->
-	<link href="css/custom.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="css/mousecursor.css">
+    <!-- Main Custom Css -->
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+
+
+    <!-- service design css satrt -->
+
+    <!-- ═══ GMA SERVICE EXPLORER START ═══ -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .gma-section {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #ffffff;
+            padding: 72px 0;
+        }
+
+        .gma-section *,
+        .gma-section *::before,
+        .gma-section *::after {
+            box-sizing: border-box;
+        }
+
+        .gma-cat-scroll {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .gma-ct {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 10px 18px;
+            border-radius: 50px;
+            border: 1.5px solid #e0ddd6;
+            background: #f7f5f0;
+            cursor: pointer;
+            transition: all .22s ease;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            flex-shrink: 0;
+        }
+
+        .gma-ct svg {
+            width: 16px;
+            height: 16px;
+            stroke: #999;
+            fill: none;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            transition: stroke .22s;
+            flex-shrink: 0;
+        }
+
+        .gma-ct-label {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #777;
+            white-space: nowrap;
+            transition: color .22s;
+        }
+
+        .gma-ct.active {
+            background: #081D0D;
+            border-color: #081D0D;
+        }
+
+        .gma-ct.active svg {
+            stroke: #FFD268;
+        }
+
+        .gma-ct.active .gma-ct-label {
+            color: #FFD268;
+        }
+
+        .gma-ct:hover:not(.active) {
+            border-color: #FFD268;
+            background: #fffbe6;
+        }
+
+        .gma-ct:hover:not(.active) .gma-ct-label {
+            color: #081D0D;
+        }
+
+        .gma-count-bar {
+            font-size: 12px;
+            color: #aaa;
+            font-weight: 500;
+            margin-bottom: 16px;
+            padding: 0 2px;
+        }
+
+        .gma-count-bar b {
+            color: #081D0D;
+            font-weight: 800;
+        }
+
+        .gma-explorer {
+            display: grid;
+            grid-template-columns: 310px 1fr;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1.5px solid #e8e4db;
+            background: #fff;
+            box-shadow: 0 6px 40px rgba(8, 29, 13, .07);
+        }
+
+        .gma-exp-left {
+            background: #f9f8f5;
+            border-right: 1.5px solid #e8e4db;
+            overflow-y: auto;
+            max-height: 560px;
+            scrollbar-width: thin;
+            scrollbar-color: #ddd transparent;
+        }
+
+        .gma-exp-left::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        .gma-exp-left::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 10px;
+        }
+
+        .gma-exp-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Each service row */
+        .gma-exp-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 18px;
+            cursor: pointer;
+            border-bottom: 1px solid #ece8df;
+            transition: background .16s;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .gma-exp-item:last-child {
+            border-bottom: none;
+        }
+
+        .gma-exp-item.active {
+            background: #fffbe6;
+        }
+
+        .gma-exp-item.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #FFD268;
+            border-radius: 0 2px 2px 0;
+        }
+
+        .gma-exp-item:hover:not(.active) {
+            background: #f0ece3;
+        }
+
+        .gma-ei-left {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .gma-ei-num {
+            width: 27px;
+            height: 27px;
+            border-radius: 7px;
+            background: #e8e4db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 800;
+            color: #999;
+            flex-shrink: 0;
+            transition: all .2s;
+        }
+
+        .gma-exp-item.active .gma-ei-num {
+            background: #081D0D;
+            color: #FFD268;
+        }
+
+        .gma-ei-title {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #666;
+            line-height: 1.35;
+            transition: color .2s;
+        }
+
+        .gma-exp-item.active .gma-ei-title {
+            color: #081D0D;
+        }
+
+        .gma-ei-price {
+            font-size: 12px;
+            font-weight: 800;
+            color: #081D0D;
+            white-space: nowrap;
+            margin-left: 8px;
+            flex-shrink: 0;
+            background: #f0ece3;
+            padding: 3px 8px;
+            border-radius: 20px;
+            transition: all .2s;
+        }
+
+        .gma-exp-item.active .gma-ei-price {
+            background: #FFD268;
+            color: #081D0D;
+        }
+
+        /* Arrow icon */
+        .gma-ei-arr {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            stroke: #ccc;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            transition: transform .25s, stroke .2s;
+            margin-left: 6px;
+        }
+
+        .gma-exp-item.active .gma-ei-arr {
+            stroke: #FFD268;
+            transform: rotate(90deg);
+        }
+
+        /* Mobile inline accordion panel */
+        .gma-acc-panel {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height .35s cubic-bezier(.4, 0, .2, 1);
+            background: #fff;
+            border-bottom: 1px solid #ece8df;
+        }
+
+        .gma-acc-panel.open {
+            max-height: 900px;
+        }
+
+        .gma-acc-inner {
+            padding: 20px 18px 24px;
+        }
+
+        /* Right Detail (desktop) */
+        .gma-exp-right {
+            padding: 32px 28px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 480px;
+        }
+
+        .gma-detail-cat {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #FFD268;
+            background: #081D0D;
+            display: inline-block;
+            padding: 4px 13px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            width: fit-content;
+        }
+
+        .gma-detail-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #081D0D;
+            line-height: 1.3;
+            margin-bottom: 6px;
+        }
+
+        .gma-detail-price-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .gma-detail-price {
+            font-size: 26px;
+            font-weight: 800;
+            color: #081D0D;
+        }
+
+        .gma-detail-price span {
+            font-size: 15px;
+            font-weight: 600;
+            color: #aaa;
+        }
+
+        .gma-detail-badge {
+            background: #fffbe6;
+            border: 1.5px solid #FFD268;
+            color: #7a5c00;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .gma-detail-img {
+            width: 100%;
+            height: 50vh;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #f0ece3;
+            margin-bottom: 18px;
+            border: 1px solid #ece8df;
+        }
+
+        .gma-detail-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gma-detail-desc {
+            font-size: 13.5px;
+            color: #777;
+            line-height: 1.8;
+            margin-bottom: 18px;
+            flex: 1;
+        }
+
+        .gma-detail-features {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .gma-df-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: #444;
+            font-weight: 500;
+        }
+
+        .gma-df-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #FFD268;
+            border: 1.5px solid #081D0D;
+            flex-shrink: 0;
+        }
+
+        .gma-book-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #081D0D;
+            color: #FFD268;
+            font-size: 13.5px;
+            font-weight: 800;
+            padding: 14px 28px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all .22s;
+            letter-spacing: .3px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .gma-book-btn:hover {
+            background: #FFD268;
+            color: #081D0D;
+        }
+
+        .gma-book-btn svg {
+            width: 15px;
+            height: 15px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+        }
+
+        /* Mobile: book btn full width */
+        .gma-acc-inner .gma-book-btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .gma-acc-inner .gma-detail-img {
+            height: 160px;
+        }
+
+        /* ── BOOKING POPUP ── */
+        #gmaBookOverlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(8, 29, 13, .75);
+            z-index: 999999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        #gmaBookOverlay.gma-open {
+            display: flex;
+        }
+
+        #gmaBookBox {
+            background: #fff;
+            border-radius: 22px;
+            width: 100%;
+            max-width: 500px;
+            overflow: hidden;
+            box-shadow: 0 32px 80px rgba(0, 0, 0, .28);
+            animation: gmaSlide .3s cubic-bezier(.22, 1, .36, 1);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        @keyframes gmaSlide {
+            from {
+                opacity: 0;
+                transform: translateY(24px) scale(.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .gma-pop-head {
+            background: #081D0D;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .gma-pop-head-title {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .gma-pop-head-sub {
+            color: rgba(255, 255, 255, .45);
+            font-size: 12px;
+            margin-top: 3px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .gma-pop-close {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .15);
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .2s;
+            flex-shrink: 0;
+            font-family: inherit;
+        }
+
+        .gma-pop-close:hover {
+            background: rgba(255, 210, 104, .25);
+            color: #FFD268;
+        }
+
+        .gma-pop-body {
+            padding: 20px 24px 8px;
+        }
+
+        .gma-chip {
+            display: inline-flex;
+            align-items: center;
+            background: #fffbe6;
+            border: 1.5px solid #FFD268;
+            color: #081D0D;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 6px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .gma-chip-price {
+            display: inline-flex;
+            align-items: center;
+            background: #081D0D;
+            color: #FFD268;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin-left: 6px;
+        }
+
+        .gma-f-row {
+            margin-bottom: 13px;
+        }
+
+        .gma-f-row label {
+            display: block;
+            font-size: 10px;
+            font-weight: 700;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: .7px;
+            margin-bottom: 5px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .gma-f-row input,
+        .gma-f-row select,
+        .gma-f-row textarea {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1.5px solid #e5e2da;
+            border-radius: 10px;
+            font-size: 13px;
+            color: #081D0D;
+            background: #fafaf8;
+            outline: none;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: border-color .2s;
+            -webkit-appearance: none;
+        }
+
+        .gma-f-row textarea {
+            height: 68px;
+            resize: none;
+        }
+
+        .gma-f-row input:focus,
+        .gma-f-row select:focus,
+        .gma-f-row textarea:focus {
+            border-color: #FFD268;
+            background: #fffef8;
+        }
+
+        .gma-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .gma-pop-footer {
+            padding: 14px 24px;
+            border-top: 1px solid #f0ece6;
+            display: flex;
+            gap: 10px;
+            background: #fafaf8;
+        }
+
+        .gma-btn-submit {
+            flex: 1;
+            background: #25D366;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 13px;
+            font-size: 13px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: opacity .2s;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .gma-btn-submit:hover {
+            opacity: .88;
+        }
+
+        .gma-btn-submit svg {
+            width: 17px;
+            height: 17px;
+            fill: #fff;
+            flex-shrink: 0;
+        }
+
+        .gma-btn-cancel {
+            background: transparent;
+            border: 1.5px solid #e5e2da;
+            color: #888;
+            border-radius: 50px;
+            padding: 13px 18px;
+            font-size: 13px;
+            cursor: pointer;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .gma-btn-cancel:hover {
+            background: #f5f3ee;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 991px) {
+            .gma-explorer {
+                grid-template-columns: 1fr;
+            }
+
+            .gma-exp-left {
+                border-right: none;
+                max-height: none;
+                overflow-y: visible;
+            }
+
+            .gma-exp-right {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gma-section {
+                padding: 50px 0;
+            }
+
+            .gma-ct {
+                padding: 8px 13px;
+            }
+
+            .gma-ct-label {
+                font-size: 12px;
+            }
+
+            .gma-detail-title {
+                font-size: 17px;
+            }
+
+            .gma-2col {
+                grid-template-columns: 1fr;
+            }
+
+            .gma-pop-body {
+                padding: 16px 18px 8px;
+            }
+
+            .gma-pop-footer {
+                padding: 12px 18px;
+                flex-direction: column;
+            }
+
+            .gma-btn-cancel {
+                text-align: center;
+            }
+        }
+    </style>
+
+    <!-- end css for service design -->
+
+
 </head>
+
 <body>
 
- <!-- Preloader Start -->
+    <!-- Preloader Start -->
     <div class="preloader">
         <div class="loading-container">
             <div class="loading"></div>
@@ -115,648 +804,446 @@
     </header>
     <!-- Header End -->
 
-    <!-- Page Header Start -->
-    <div class="page-header dark-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
-                    <div class="page-header-box">
-                        <h1 class="text-anime-style-3" data-cursor="-opaque">Our services</h1>
-                        <nav class="wow fadeInUp">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index-2.html">home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">services</li>
-                            </ol>
-                        </nav>
+  <!-- Page Header Start -->
+<div class="page-header dark-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Page Header Box Start -->
+                <div class="page-header-box">
+                    <h1 class="text-anime-style-3" data-cursor="-opaque">Our Services</h1>
+                    <div class="post-single-meta wow fadeInUp">
+                        <ol class="breadcrumb">
+                            <li><i class="fa-regular fa-user"></i>Grow More Appliances</li>
+                            <li><i class="fa-regular fa-clock"></i>Electronic Repair</li>
+                        </ol>
                     </div>
-                    <!-- Page Header Box End -->
                 </div>
+                <!-- Page Header Box End -->
             </div>
         </div>
     </div>
+</div>
     <!-- Page Header End -->
 
-      <!-- Our Projects Start -->
-    <div class="our-projects">
+
+
+    <!-- HTML -->
+    <div class="gma-section">
         <div class="container">
-            <div class="row section-row align-items-center">
+
+            <div class="row section-row align-items-center mb-4">
                 <div class="col-lg-6">
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">Our Services</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Our Repair Services for All Home Appliances
-                        </h2>
+                        <h3 class="wow fadeInUp">what we offer</h3>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">All Home Appliance Services</h2>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
-                        <a href="projects.html" class="btn-default">View All Project</a>
+                    <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
+                        <p>Select a category below, then choose your service and book directly from this page.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Choose Our Project Nav start -->
-                    <div class="our-Project-nav wow fadeInUp">
-                        <ul>
-                            <li><a href="#" class="btn-default active-btn" data-filter="*">all</a></li>
-                            <li><a href="#" class="btn-default" data-filter=".air_conditioner">Air Conditioners</a></li>
-                            <li><a href="#" class="btn-default" data-filter=".washing_machine">Washing Machine</a></li>
-                            <li><a href="#" class="btn-default" data-filter=".Refrigerators">Refrigerators</a></li>
-                            <li><a href="#" class="btn-default" data-filter=".Microwave">Mircowave</a></li>
-                            <li><a href="#" class="btn-default" data-filter=".LED">LED</a></li>
-                            <li><a href="#" class="btn-default" data-filter=".Geyser">Geyser</a></li>
-                            <li><a href="#" class="btn-default" data-filter=".Chimney">Chimney</a></li>
-                        </ul>
-                    </div>
-                    <!-- Choose Our Project Nav End -->
+            <div class="gma-cat-scroll wow fadeInUp" id="gmaCatTabs">
+                <button class="gma-ct active" data-cat="ac">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="10" rx="2" />
+                        <path d="M6 17v2M12 17v2M18 17v2" />
+                    </svg>
+                    <span class="gma-ct-label">AC</span>
+                </button>
+                <button class="gma-ct" data-cat="wm">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="4" y="2" width="16" height="20" rx="2" />
+                        <circle cx="12" cy="14" r="4" />
+                        <circle cx="12" cy="14" r="2" />
+                    </svg>
+                    <span class="gma-ct-label">Washing Machine</span>
+                </button>
+                <button class="gma-ct" data-cat="rf">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="6" y="2" width="12" height="20" rx="2" />
+                        <line x1="6" y1="12" x2="18" y2="12" />
+                        <line x1="9" y1="7" x2="9" y2="10" />
+                    </svg>
+                    <span class="gma-ct-label">Refrigerator</span>
+                </button>
+                <button class="gma-ct" data-cat="mw">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="10" rx="2" />
+                        <rect x="4" y="9" width="12" height="6" rx="1" />
+                    </svg>
+                    <span class="gma-ct-label">Microwave</span>
+                </button>
+                <button class="gma-ct" data-cat="led">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="4" width="20" height="13" rx="2" />
+                        <path d="M9 21h6M12 17v4" />
+                    </svg>
+                    <span class="gma-ct-label">LED TV</span>
+                </button>
+                <button class="gma-ct" data-cat="gy">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="8" y="3" width="8" height="14" rx="4" />
+                        <path d="M12 17v4M9 21h6" />
+                    </svg>
+                    <span class="gma-ct-label">Geyser</span>
+                </button>
+                <button class="gma-ct" data-cat="ch">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="4" y="14" width="16" height="8" rx="2" />
+                        <path d="M7 14L9 6L15 6L17 14Z" />
+                    </svg>
+                    <span class="gma-ct-label">Chimney</span>
+                </button>
+            </div>
+
+            <div class="gma-count-bar">Showing <b id="gmaCount">0</b> services in this category</div>
+
+            <div class="gma-explorer wow fadeInUp" data-wow-delay="0.2s">
+                <div class="gma-exp-left">
+                    <ul class="gma-exp-list" id="gmaExpList"></ul>
                 </div>
+                <div class="gma-exp-right" id="gmaExpRight"></div>
+            </div>
 
-                <div class="col-lg-12">
-                    <div class="row project-item-boxes align-items-center">
+        </div>
+    </div>
 
-                        <div class="col-lg-4 col-md-6 project-item-box air_conditioner">
-                            <div class="project-item wow fadeInUp">
-                                <div class="project-image">
-                                    <figure class="image-anime"><img src="images/project11.png" alt="AC Service">
-                                    </figure>
-                                    <div class="project-btn">
-                                        <a href="#" class="gmp-trigger" data-cat="ac"><i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <p>Air Conditioners</p>
-                                    <h3><a href="#" class="gmp-trigger" data-cat="ac">Window AC and Split AC Service</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 project-item-box Refrigerators">
-                            <div class="project-item wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="project-image">
-                                    <figure class="image-anime"><img src="images/project22.png"
-                                            alt="Refrigerator Service"></figure>
-                                    <div class="project-btn">
-                                        <a href="#" class="gmp-trigger" data-cat="rf"><i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <p>Upgrades</p>
-                                    <h3><a href="#" class="gmp-trigger" data-cat="rf">Refrigerators Installations and
-                                            repair Services</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 project-item-box washing_machine">
-                            <div class="project-item wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="project-image">
-                                    <figure class="image-anime"><img src="images/project33.jpg"
-                                            alt="Washing Machine Service"></figure>
-                                    <div class="project-btn">
-                                        <a href="#" class="gmp-trigger" data-cat="wm"><i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <p>Installations</p>
-                                    <h3><a href="#" class="gmp-trigger" data-cat="wm">Washing Machine Installation
-                                            Repair and Services</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 project-item-box Microwave">
-                            <div class="project-item wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="project-image">
-                                    <figure class="image-anime"><img src="images/project55.png" alt="Microwave Service">
-                                    </figure>
-                                    <div class="project-btn">
-                                        <a href="#" class="gmp-trigger" data-cat="mw"><i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <p>Upgrades</p>
-                                    <h3><a href="#" class="gmp-trigger" data-cat="mw">Oven Microwave repair and
-                                            Installation</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 project-item-box LED">
-                            <div class="project-item wow fadeInUp" data-wow-delay="0.8s">
-                                <div class="project-image">
-                                    <figure class="image-anime"><img src="images/project66.png" alt="LED Service">
-                                    </figure>
-                                    <div class="project-btn">
-                                        <a href="#" class="gmp-trigger" data-cat="led"><i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <p>Security</p>
-                                    <h3><a href="#" class="gmp-trigger" data-cat="led">LED TV Installation and
-                                            Repairing</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 project-item-box Chimney">
-                            <div class="project-item wow fadeInUp" data-wow-delay="1s">
-                                <div class="project-image">
-                                    <figure class="image-anime"><img src="images/project88.png" alt="Chimney Service">
-                                    </figure>
-                                    <div class="project-btn">
-                                        <a href="#" class="gmp-trigger" data-cat="ch"><i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <p>Screen Repair</p>
-                                    <h3><a href="#" class="gmp-trigger" data-cat="ch">Chimney Installation and
-                                            repair</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
+    <!-- BOOKING POPUP -->
+    <div id="gmaBookOverlay">
+        <div id="gmaBookBox">
+            <div class="gma-pop-head">
+                <div>
+                    <div class="gma-pop-head-title">Book a Service</div>
+                    <div class="gma-pop-head-sub">Details sent via WhatsApp instantly</div>
+                </div>
+                <button class="gma-pop-close" onclick="gmaCloseBook()">&#x2715;</button>
+            </div>
+            <div class="gma-pop-body">
+                <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+                    <div class="gma-chip" id="gmaChip">Select a service</div>
+                    <div class="gma-chip-price" id="gmaChipPrice">&#8377; —</div>
+                </div>
+                <div class="gma-2col">
+                    <div class="gma-f-row">
+                        <label>Your Name</label>
+                        <input id="gmaName" type="text" placeholder="Rahul Sharma">
+                    </div>
+                    <div class="gma-f-row">
+                        <label>Phone Number</label>
+                        <input id="gmaPhone" type="tel" placeholder="+91 98765 43210">
                     </div>
                 </div>
-
-                <div class="col-lg-12">
-                    <div class="row project-item-boxes align-items-center">
-                        <div class="col-lg-4 col-md-6 project-item-box Geyser">
-                            <div class="project-item wow fadeInUp">
-                                <div class="project-image">
-                                    <figure class="image-anime"><img src="images/project77.jpg" alt="Geyser Service">
-                                    </figure>
-                                    <div class="project-btn">
-                                        <a href="#" class="gmp-trigger" data-cat="gy"><i
-                                                class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <p>Geyser</p>
-                                    <h3><a href="#" class="gmp-trigger" data-cat="gy">Geyser Installation and repair</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
+                <div class="gma-f-row">
+                    <label>Full Address</label>
+                    <input id="gmaAddress" type="text" placeholder="House no, Street, Area, City">
+                </div>
+                <div class="gma-2col">
+                    <div class="gma-f-row">
+                        <label>Preferred Date</label>
+                        <input id="gmaDate" type="date">
+                    </div>
+                    <div class="gma-f-row">
+                        <label>Time Slot</label>
+                        <select id="gmaTime">
+                            <option>Morning (9 AM – 12 PM)</option>
+                            <option>Afternoon (12 PM – 4 PM)</option>
+                            <option>Evening (4 PM – 7 PM)</option>
+                        </select>
                     </div>
                 </div>
-
+                <div class="gma-f-row">
+                    <label>Extra Note (optional)</label>
+                    <textarea id="gmaNote" placeholder="Any specific issue or instructions..."></textarea>
+                </div>
+            </div>
+            <div class="gma-pop-footer">
+                <button class="gma-btn-cancel" onclick="gmaCloseBook()">Cancel</button>
+                <button class="gma-btn-submit" onclick="gmaSendWA()">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    Send via WhatsApp
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- Our Projects End -->
-    <!-- ===================== POPUP ===================== -->
-    <style>
-        #gmpOverlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(5, 5, 15, 0.7);
-            z-index: 999999;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        #gmpOverlay.gmp-show {
-            display: flex;
-        }
-
-        #gmpBox {
-            background: #ffffff;
-            border-radius: 24px;
-            width: 100%;
-            max-width: 960px;
-            max-height: 92vh;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
-            animation: gmpSlide 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        @keyframes gmpSlide {
-            from {
-                opacity: 0;
-                transform: translateY(40px) scale(0.96);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        /* HEAD */
-        #gmpHead {
-            background: #1a1a2e;
-            padding: 24px 32px 22px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-shrink: 0;
-        }
-
-        #gmpHeadLeft {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-        }
-
-        #gmpIconWrap {
-            width: 54px;
-            height: 54px;
-            border-radius: 14px;
-            background: rgba(255, 210, 104, 0.15);
-            border: 2px solid rgba(255, 210, 104, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        #gmpIconWrap svg {
-            width: 30px;
-            height: 30px;
-        }
-
-        #gmpTitle {
-            color: #ffffff;
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin: 0;
-            letter-spacing: -0.3px;
-        }
-
-        #gmpSub {
-            color: rgba(255, 255, 255, 0.38);
-            font-size: 0.76rem;
-            margin-top: 4px;
-        }
-
-        #gmpClose {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1.5px solid rgba(255, 255, 255, 0.15);
-            color: rgba(255, 255, 255, 0.75);
-            font-size: 1.1rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s;
-            flex-shrink: 0;
-            line-height: 1;
-        }
-
-        #gmpClose:hover {
-            background: rgba(255, 210, 104, 0.2);
-            color: #FFD268;
-            border-color: rgba(255, 210, 104, 0.45);
-        }
-
-        /* BODY */
-        #gmpBody {
-            padding: 28px 32px 22px;
-            overflow-y: auto;
-            flex: 1;
-            background: #f9f8f5;
-            scrollbar-width: thin;
-            scrollbar-color: #ddd transparent;
-        }
-
-        #gmpBody::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        #gmpBody::-webkit-scrollbar-thumb {
-            background: #ddd;
-            border-radius: 10px;
-        }
-
-        /* GRID */
-        #gmpGrid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 16px;
-        }
-
-        /* CARD */
-        .gmp-card {
-            background: #ffffff;
-            border: 1.5px solid #ece8df;
-            border-radius: 16px;
-            overflow: hidden;
-            transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
-            animation: gmpCardIn 0.32s ease both;
-        }
-
-        @keyframes gmpCardIn {
-            from {
-                opacity: 0;
-                transform: translateY(14px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .gmp-card:hover {
-            transform: translateY(-6px);
-            border-color: #FFD268;
-            box-shadow: 0 12px 32px rgba(255, 210, 104, 0.22);
-        }
-
-        .gmp-card-img {
-            width: 100%;
-            height: 130px;
-            overflow: hidden;
-            background: #f0ece3;
-        }
-
-        .gmp-card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.45s ease;
-        }
-
-        .gmp-card:hover .gmp-card-img img {
-            transform: scale(1.07);
-        }
-
-        .gmp-card-body {
-            padding: 12px 13px 14px;
-        }
-
-        .gmp-card-title {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #1a1a2e;
-            line-height: 1.4;
-            margin: 0 0 10px;
-            min-height: 2.2em;
-        }
-
-        .gmp-card-btn {
-            display: block;
-            width: 100%;
-            text-align: center;
-            font-size: 0.73rem;
-            font-weight: 700;
-            padding: 7px 0;
-            border-radius: 50px;
-            border: 2px solid #FFD268;
-            background: transparent;
-            color: #1a1a2e;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.18s;
-            letter-spacing: 0.2px;
-        }
-
-        .gmp-card-btn:hover {
-            background: #FFD268;
-            color: #1a1a2e;
-        }
-
-        /* FOOTER */
-        #gmpFooter {
-            padding: 14px 32px;
-            border-top: 1px solid #ece8df;
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-shrink: 0;
-        }
-
-        #gmpFooter span {
-            font-size: 0.8rem;
-            color: #aaa;
-        }
-
-        #gmpFooter b {
-            color: #1a1a2e;
-            font-weight: 700;
-        }
-
-        #gmpFooterLink {
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: #1a1a2e;
-            text-decoration: none;
-            background: #FFD268;
-            padding: 7px 20px;
-            border-radius: 50px;
-            transition: opacity 0.2s;
-        }
-
-        #gmpFooterLink:hover {
-            opacity: 0.85;
-        }
-
-        @media(max-width:768px) {
-            #gmpBox {
-                border-radius: 18px;
-            }
-
-            #gmpHead {
-                padding: 18px 20px;
-            }
-
-            #gmpBody {
-                padding: 20px 16px 16px;
-            }
-
-            #gmpGrid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                gap: 12px;
-            }
-
-            #gmpFooter {
-                padding: 12px 20px;
-            }
-
-            .gmp-card-img {
-                height: 110px;
-            }
-        }
-
-        @media(max-width:480px) {
-            #gmpGrid {
-                grid-template-columns: 1fr 1fr;
-                gap: 10px;
-            }
-
-            .gmp-card-img {
-                height: 95px;
-            }
-
-            #gmpTitle {
-                font-size: 1rem;
-            }
-        }
-    </style>
-
-    <div id="gmpOverlay">
-        <div id="gmpBox">
-            <div id="gmpHead">
-                <div id="gmpHeadLeft">
-                    <div id="gmpIconWrap"></div>
-                    <div>
-                        <div id="gmpTitle">Services</div>
-                        <div id="gmpSub"></div>
-                    </div>
-                </div>
-                <button id="gmpClose" title="Close">&#x2715;</button>
-            </div>
-            <div id="gmpBody">
-                <div id="gmpGrid"></div>
-            </div>
-            <div id="gmpFooter">
-                <span>Showing <b id="gmpCount">0</b> services</span>
-                <a href="project-single.html" id="gmpFooterLink">View All &rarr;</a>
-            </div>
-        </div>
-    </div>
-
- 
     <script>
         (function () {
 
-            var GMP = {
+            var GMA_D = {
                 ac: {
-                    label: 'Air Conditioner Services',
-                    icon: '<svg viewBox="0 0 32 32" fill="none"><rect x="2" y="9" width="28" height="11" rx="3" fill="#FFD268"/><rect x="2" y="15" width="28" height="5" rx="2" fill="#e8b93a"/><circle cx="8" cy="14" r="1.8" fill="#081D0D"/><circle cx="14" cy="14" r="1.8" fill="#081D0D"/><circle cx="20" cy="14" r="1.8" fill="#081D0D"/><path d="M8 20 Q9 24 8 27" stroke="#FFD268" stroke-width="1.6" stroke-linecap="round" fill="none"/><path d="M16 20 Q17 24 16 27" stroke="#FFD268" stroke-width="1.6" stroke-linecap="round" fill="none"/><path d="M24 20 Q25 24 24 27" stroke="#FFD268" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>',
-                    list: [
-                        { title: 'Window AC Jet Service', img: 'images/Window AC Jet Service.png', key: 'window-ac-jet' },
-                        { title: 'Split AC Jet Service', img: 'images/split-ac-jet.png', key: 'split-ac-jet' },
-                        { title: 'Window AC Installation', img: 'images/window-ac-install.png', key: 'window-ac-install' },
-                        { title: 'Split AC Installation', img: 'images/split-ac-install.png', key: 'split-ac-install' },
-                        { title: 'Window AC Dismantle', img: 'images/window-ac-dismantle.png', key: 'window-ac-dismantle' },
-                        { title: 'Split AC Dismantle', img: 'images/split-ac-dismantle.png', key: 'split-ac-dismantle' },
-                        { title: 'Split AC Only Outdoor Re-Installation', img: 'images/split-ac-outdoor.png', key: 'split-ac-outdoor-reinstall' },
-                        { title: 'Split AC Only Indoor Re-Installation', img: 'images/split-ac-indoor.png', key: 'split-ac-indoor-reinstall' },
-                        { title: 'Split AC Water Leakage Problem', img: 'images/ac-leakage.png', key: 'ac-water-leakage' },
-                        { title: 'Split/Window AC Labour Charges in Breakdown', img: 'images/ac-breakdown.png', key: 'ac-breakdown' }
+                    label: 'Air Conditioners', services: [
+                        { title: 'Window AC Jet Service', price: 400, img: 'images/Window AC Jet Service.png', desc: 'Complete jet cleaning of window AC unit for optimal cooling performance and energy efficiency.', features: ['Deep coil & filter cleaning', 'Cooling performance check', 'Anti-bacterial treatment'] },
+                        { title: 'Split AC Jet Service', price: 500, img: 'images/split-ac-jet.png', desc: 'High-pressure jet cleaning for split AC indoor and outdoor units to restore full cooling capacity.', features: ['Indoor & outdoor unit clean', 'Drain pipe cleaning', 'Performance testing'] },
+                        { title: 'Window AC Installation', price: 500, img: 'images/window-ac-install.png', desc: 'Professional window AC installation with proper fitting, sealing and full test run.', features: ['Frame fitting & sealing', 'Electrical connection', 'Test run included'] },
+                        { title: 'Split AC Installation', price: 1200, img: 'images/split-ac-install.png', desc: 'Expert split AC installation with copper pipe fitting and gas level verification.', features: ['Indoor & outdoor mounting', 'Copper pipe fitting', 'Gas level check'] },
+                        { title: 'Window AC Dismantle', price: 300, img: 'images/window-ac-dismantle.png', desc: 'Safe dismantling of window AC without any damage to frame or wall structure.', features: ['Safe removal process', 'Frame & wall protected', 'Packaging assistance'] },
+                        { title: 'Split AC Dismantle', price: 500, img: 'images/split-ac-dismantle.png', desc: 'Complete split AC dismantling with gas recovery and pipe removal done safely.', features: ['Gas recovery done', 'Pipe capped safely', 'Clean removal'] },
+                        { title: 'Split AC Outdoor Re-Installation', price: 800, img: 'images/split-ac-outdoor.png', desc: 'Re-installation of split AC outdoor unit at new or same location with full testing.', features: ['Bracket fitting', 'Pipe reconnection', 'Test run'] },
+                        { title: 'Split AC Indoor Re-Installation', price: 750, img: 'images/split-ac-indoor.png', desc: 'Re-installation of split AC indoor unit with proper alignment and drainage setup.', features: ['Wall bracket fitting', 'Drain pipe setup', 'Leak check'] },
+                        { title: 'AC Water Leakage Fix', price: 500, img: 'images/ac-leakage.png', desc: 'Diagnosis and fix of AC water leakage issues including blocked drain pipes and tray faults.', features: ['Drain pipe cleaning', 'Tray inspection', 'Root cause fix'] },
+                        { title: 'AC Labour — Breakdown', price: 300, img: 'images/ac-breakdown.png', desc: 'On-site diagnosis and repair of AC breakdown issues with genuine spare parts.', features: ['Full diagnosis', 'Part repair/replace', 'Same day service'] }
                     ]
                 },
                 wm: {
-                    label: 'Washing Machine Services',
-                    icon: '<svg viewBox="0 0 32 32" fill="none"><rect x="5" y="3" width="22" height="26" rx="3" fill="#FFD268"/><rect x="5" y="3" width="22" height="9" rx="3" fill="#e8b93a"/><circle cx="16" cy="20" r="6" fill="#fff" stroke="#e8b93a" stroke-width="1.4"/><circle cx="16" cy="20" r="3.2" fill="#FFD268"/><circle cx="9" cy="7" r="1.4" fill="#fff"/></svg>',
-                    list: [
-                        { title: 'Semi/Fully Auto Top Load Labour Charge', img: 'images/Fully Automatic WM.png', key: 'wm-top-load' },
-                        { title: 'Fully Automatic Front Load Labour Charge', img: 'images/Front Load Labour Charge.png', key: 'wm-front-load' }
+                    label: 'Washing Machine', services: [
+                        { title: 'Semi/Fully Auto Top Load Repair', price: 199, img: 'images/Fully Automatic WM.png', desc: 'Complete repair service for semi and fully automatic top load washing machines of all brands.', features: ['Motor & drum check', 'PCB diagnosis', 'Water inlet/outlet fix'] },
+                        { title: 'Fully Auto Front Load Repair', price: 250, img: 'images/Front Load Labour Charge.png', desc: 'Expert repair for fully automatic front load washing machines of all major brands.', features: ['Door seal check', 'Bearing & drum repair', 'Error code diagnosis'] }
                     ]
                 },
                 rf: {
-                    label: 'Refrigerator Services',
-                    icon: '<svg viewBox="0 0 32 32" fill="none"><rect x="8" y="2" width="16" height="28" rx="3" fill="#FFD268"/><rect x="8" y="2" width="16" height="14" rx="3" fill="#e8b93a"/><line x1="8" y1="16" x2="24" y2="16" stroke="#081D0D" stroke-width="1.4"/><rect x="11" y="8" width="2.5" height="5" rx="1.2" fill="#fff"/><rect x="11" y="20" width="2.5" height="7" rx="1.2" fill="#fff"/></svg>',
-                    list: [
-                        { title: 'Single Door Service / Labour Charge', img: 'images/Single Door Service.png', key: 'fridge-single' },
-                        { title: 'Double Door Service / Labour Charge', img: 'images/Double Door Service.png', key: 'fridge-double' }
+                    label: 'Refrigerator', services: [
+                        { title: 'Single Door Service', price: 199, img: 'images/Single Door Service.png', desc: 'Complete service and repair for single door refrigerators including cooling system fix.', features: ['Compressor check', 'Gas refilling if needed', 'Thermostat testing'] },
+                        { title: 'Double Door Service', price: 250, img: 'images/Double Door Service.png', desc: 'Full service for double door and frost-free refrigerators with complete cooling diagnosis.', features: ['Defrost system check', 'Cooling optimization', 'Door seal inspection'] }
                     ]
                 },
                 mw: {
-                    label: 'Microwave Services',
-                    icon: '<svg viewBox="0 0 32 32" fill="none"><rect x="2" y="9" width="28" height="14" rx="3" fill="#FFD268"/><rect x="4" y="11" width="16" height="10" rx="2" fill="#fff"/><rect x="22" y="11" width="6" height="10" rx="1.5" fill="#e8b93a"/><circle cx="25" cy="14.5" r="1.4" fill="#081D0D"/><circle cx="25" cy="18.5" r="1.4" fill="#081D0D"/></svg>',
-                    list: [
-                        { title: 'Microwave Service / Labour Charge', img: 'images/project44.jpg', key: 'microwave-service' }
+                    label: 'Microwave Oven', services: [
+                        { title: 'Microwave Service & Repair', price: 199, img: 'images/project44.jpg', desc: 'Complete microwave oven repair including magnetron, turntable motor and control panel board.', features: ['Magnetron check', 'Control board repair', 'Turntable fix'] }
                     ]
                 },
                 led: {
-                    label: 'LED TV Services',
-                    icon: '<svg viewBox="0 0 32 32" fill="none"><rect x="2" y="5" width="28" height="18" rx="2.5" fill="#081D0D"/><rect x="4" y="7" width="24" height="14" rx="1.5" fill="#FFD268" opacity=".7"/><rect x="12" y="23" width="8" height="2.5" fill="#081D0D"/><rect x="9" y="25.5" width="14" height="1.8" rx=".9" fill="#888"/></svg>',
-                    list: [
-                        { title: 'LED TV Service & Install up to 32"', img: 'images/led tv.jpg', key: 'led-32' },
-                        { title: 'LED TV Service & Install up to 65"', img: 'images/led tv 65.jpg', key: 'led-65' }
+                    label: 'LED TV', services: [
+                        { title: 'LED TV Service up to 32"', price: 350, img: 'images/led tv.jpg', desc: 'Complete LED TV repair and service for screens up to 32 inches of all major brands.', features: ['Panel diagnosis', 'Backlight repair', 'Board level repair'] },
+                        { title: 'LED TV Service up to 65"', price: 450, img: 'images/led tv 65.jpg', desc: 'Expert LED TV repair for large screens up to 65 inches including smart TV software issues.', features: ['Smart board repair', 'Display diagnosis', 'Remote & port check'] }
                     ]
                 },
                 gy: {
-                    label: 'Geyser Services',
-                    icon: '<svg viewBox="0 0 32 32" fill="none"><rect x="11" y="4" width="10" height="18" rx="5" fill="#FFD268"/><rect x="11" y="4" width="10" height="7" rx="5" fill="#e8b93a"/><line x1="16" y1="22" x2="16" y2="27" stroke="#e8b93a" stroke-width="2.2" stroke-linecap="round"/><line x1="12" y1="27" x2="20" y2="27" stroke="#e8b93a" stroke-width="2.2" stroke-linecap="round"/><path d="M14 12 Q16 15 14 18" stroke="#081D0D" stroke-width="1.4" stroke-linecap="round" fill="none"/><path d="M18 12 Q16 15 18 18" stroke="#081D0D" stroke-width="1.4" stroke-linecap="round" fill="none"/></svg>',
-                    list: [
-                        { title: 'Instant Geyser Tank Cleaning', img: 'images/Geyser1.jpg', key: 'geyser-instant-clean' },
-                        { title: 'Geyser Tank Cleaning 10,15 & 20 Ltr', img: 'images/Geyser2.jpg', key: 'geyser-tank-10-20' },
-                        { title: 'Geyser Tank Cleaning 25 & Above', img: 'images/Geyser4.jpg', key: 'geyser-tank-25plus' },
-                        { title: 'Geyser Labour Charge in Breakdown', img: 'images/Geyser4.jpg', key: 'geyser-breakdown' },
-                        { title: 'Geyser Installation', img: 'images/Geyser5.jpg', key: 'geyser-install' },
-                        { title: 'Geyser Re-Installation', img: 'images/Geyser6.jpg', key: 'geyser-reinstall' }
+                    label: 'Geyser', services: [
+                        { title: 'Instant Geyser Tank Cleaning', price: 350, img: 'images/Geyser1.jpg', desc: 'Professional cleaning of instant geyser to remove limescale and mineral deposits.', features: ['Descaling done', 'Heating element check', 'Pressure valve test'] },
+                        { title: 'Geyser Tank Cleaning 10–20 Ltr', price: 450, img: 'images/Geyser2.jpg', desc: 'Deep cleaning of 10, 15 and 20 litre geyser tanks to improve heating efficiency.', features: ['Full tank descaling', 'Anode rod check', 'Thermostat test'] },
+                        { title: 'Geyser Tank Cleaning 25 Ltr+', price: 550, img: 'images/Geyser4.jpg', desc: 'Complete cleaning for large capacity geysers of 25 litres and above.', features: ['Heavy descaling', 'Element check', 'Safety valve test'] },
+                        { title: 'Geyser Labour — Breakdown', price: 199, img: 'images/Geyser4.jpg', desc: 'On-site geyser breakdown diagnosis and repair using genuine replacement parts.', features: ['Full diagnosis', 'Thermostat/element fix', 'Same day service'] },
+                        { title: 'Geyser Installation', price: 300, img: 'images/Geyser5.jpg', desc: 'Professional new geyser installation with proper pipe fitting and earthing connection.', features: ['Wall mounting', 'Pipe connection', 'Earthing check'] },
+                        { title: 'Geyser Re-Installation', price: 400, img: 'images/Geyser6.jpg', desc: 'Shifting and re-installation of your existing geyser at a new location with full testing.', features: ['Safe dismantling', 'New location fitting', 'Full test run'] }
                     ]
                 },
                 ch: {
-                    label: 'Chimney Services',
-                    icon: '<svg viewBox="0 0 32 32" fill="none"><rect x="6" y="17" width="20" height="12" rx="2.5" fill="#FFD268"/><path d="M9 17 L11 6 L21 6 L23 17Z" fill="#e8b93a"/><rect x="11" y="6" width="10" height="3" rx="1" fill="#081D0D"/><path d="M13 5 Q14 2.5 13 0" stroke="#FFD268" stroke-width="1.3" stroke-linecap="round" fill="none"/><path d="M19 5 Q20 2.5 19 0" stroke="#FFD268" stroke-width="1.3" stroke-linecap="round" fill="none"/></svg>',
-                    list: [
-                        { title: 'Chimney Basic Clean (Sodium Hydroxide)', img: 'images/chimney1.jpg', key: 'chimney-basic' },
-                        { title: 'Chimney Deep Clean (Sodium Hydroxide)', img: 'images/chimney2.png', key: 'chimney-deep' }
+                    label: 'Chimney', services: [
+                        { title: 'Chimney Basic Clean', price: 599, img: 'images/chimney1.jpg', desc: 'Basic chimney cleaning using sodium hydroxide solution for effective grease and oil removal.', features: ['Filter cleaning', 'Mesh & baffle wash', 'Motor check'] },
+                        { title: 'Chimney Deep Clean', price: 1099, img: 'images/chimney2.png', desc: 'Thorough deep cleaning with industrial-grade sodium hydroxide for heavy grease buildup.', features: ['Deep degreasing', 'Motor & fan clean', 'Suction test'] }
                     ]
                 }
             };
 
-            function gmpOpen(cat) {
-                var d = GMP[cat];
-                if (!d) return;
+            var curCat = 'ac';
+            var curIdx = -1;          /* -1 = none open on mobile */
+            var curTitle = '';
+            var curPrice = 0;
+            var IS_MOBILE = false;
 
-                document.getElementById('gmpIconWrap').innerHTML = d.icon;
-                document.getElementById('gmpTitle').textContent = d.label;
-                document.getElementById('gmpSub').textContent = d.list.length + ' services available';
-                document.getElementById('gmpCount').textContent = d.list.length;
+            function checkMobile() {
+                IS_MOBILE = window.innerWidth < 992;
+            }
+            checkMobile();
 
-                /* KEY change: href now includes ?service=key */
-                document.getElementById('gmpGrid').innerHTML = d.list.map(function (item, i) {
-                    return '<div class="gmp-card" style="animation-delay:' + (i * 0.05) + 's">'
-                        + '<div class="gmp-card-img"><img src="' + item.img + '" alt="' + item.title + '" loading="lazy"></div>'
-                        + '<div class="gmp-card-body">'
-                        + '<p class="gmp-card-title">' + item.title + '</p>'
-                        + '<a href="project-single.html?service=' + item.key + '" class="gmp-card-btn">View Details</a>'
-                        + '</div></div>';
-                }).join('');
+            /* ── Build detail HTML ── */
+            function buildDetail(sv) {
+                curTitle = sv.title;
+                curPrice = sv.price;
+                return '<div class="gma-detail-cat">' + GMA_D[curCat].label + '</div>'
+                    + '<div class="gma-detail-title">' + sv.title + '</div>'
+                    + '<div class="gma-detail-price-row">'
+                    + '<div class="gma-detail-price"><span>&#8377;</span>' + sv.price + '</div>'
+                    + '<div class="gma-detail-badge">Labour Charge</div>'
+                    + '</div>'
+                    + '<div class="gma-detail-img"><img src="' + sv.img + '" alt="' + sv.title + '" loading="lazy" onerror="this.style.display=\'none\'"></div>'
+                    + '<div class="gma-detail-desc">' + sv.desc + '</div>'
+                    + '<div class="gma-detail-features">'
+                    + sv.features.map(function (f) { return '<div class="gma-df-item"><div class="gma-df-dot"></div>' + f + '</div>'; }).join('')
+                    + '</div>'
+                    + '<button class="gma-book-btn" onclick="gmaOpenBook(\'' + sv.title.replace(/'/g, "\\'") + '\',' + sv.price + ')">'
+                    + '<svg viewBox="0 0 18 18"><path d="M9 1v16M1 9h16"/></svg>Book This Service'
+                    + '</button>';
+            }
 
-                document.getElementById('gmpOverlay').classList.add('gmp-show');
+            /* ── Render list (no event listeners attached here) ── */
+            function renderList() {
+                var svcs = GMA_D[curCat].services;
+                document.getElementById('gmaCount').textContent = svcs.length;
+
+                var html = '';
+                svcs.forEach(function (sv, i) {
+                    var isAct = (i === curIdx);
+                    html += '<li class="gma-exp-item' + (isAct ? ' active' : '') + '" data-idx="' + i + '">'
+                        + '<div class="gma-ei-left">'
+                        + '<div class="gma-ei-num">' + (i < 9 ? '0' : '') + (i + 1) + '</div>'
+                        + '<div class="gma-ei-title">' + sv.title + '</div>'
+                        + '</div>'
+                        + '<span class="gma-ei-price">&#8377;' + sv.price + '</span>'
+                        + '<svg class="gma-ei-arr" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>'
+                        + '</li>';
+
+                    /* Mobile accordion panel — always rendered, open class controls visibility */
+                    html += '<li style="list-style:none;padding:0;" data-panel="' + i + '">'
+                        + '<div class="gma-acc-panel' + (isAct ? ' open' : '') + '">'
+                        + '<div class="gma-acc-inner">' + buildDetail(sv) + '</div>'
+                        + '</div>'
+                        + '</li>';
+                });
+
+                document.getElementById('gmaExpList').innerHTML = html;
+
+                /* Desktop right panel */
+                if (!IS_MOBILE) {
+                    var right = document.getElementById('gmaExpRight');
+                    if (curIdx >= 0) {
+                        right.innerHTML = buildDetail(svcs[curIdx]);
+                    } else {
+                        /* Default: show first item on desktop */
+                        curIdx = 0;
+                        right.innerHTML = buildDetail(svcs[0]);
+                        /* Mark first item active */
+                        var firstItem = document.querySelector('#gmaExpList .gma-exp-item');
+                        if (firstItem) firstItem.classList.add('active');
+                    }
+                }
+            }
+
+            /* ── SINGLE delegated click handler — attached ONCE ── */
+            document.getElementById('gmaExpList').addEventListener('click', function (e) {
+                var item = e.target.closest('.gma-exp-item');
+                if (!item) return;
+
+                var idx = parseInt(item.getAttribute('data-idx'), 10);
+
+                if (IS_MOBILE) {
+                    /* Toggle: same index → close, different → open new */
+                    var newIdx = (idx === curIdx) ? -1 : idx;
+                    curIdx = newIdx;
+
+                    /* Update active class on all items */
+                    var allItems = document.querySelectorAll('#gmaExpList .gma-exp-item');
+                    allItems.forEach(function (el) {
+                        var elIdx = parseInt(el.getAttribute('data-idx'), 10);
+                        if (elIdx === curIdx) {
+                            el.classList.add('active');
+                        } else {
+                            el.classList.remove('active');
+                        }
+                    });
+
+                    /* Open/close panels */
+                    var allPanels = document.querySelectorAll('#gmaExpList .gma-acc-panel');
+                    allPanels.forEach(function (panel, pi) {
+                        if (pi === curIdx) {
+                            panel.classList.add('open');
+                        } else {
+                            panel.classList.remove('open');
+                        }
+                    });
+
+                    /* Smooth scroll to opened item (not top of page) */
+                    if (curIdx >= 0) {
+                        setTimeout(function () {
+                            var activeItem = document.querySelectorAll('#gmaExpList .gma-exp-item')[curIdx];
+                            if (activeItem) {
+                                activeItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                            }
+                        }, 50);
+                    }
+
+                } else {
+                    /* Desktop: update active + right panel */
+                    curIdx = idx;
+                    var allItems = document.querySelectorAll('#gmaExpList .gma-exp-item');
+                    allItems.forEach(function (el) {
+                        el.classList.toggle('active', parseInt(el.getAttribute('data-idx'), 10) === curIdx);
+                    });
+                    document.getElementById('gmaExpRight').innerHTML = buildDetail(GMA_D[curCat].services[curIdx]);
+                }
+            });
+
+            /* ── Category tabs — ONE delegated handler ── */
+            document.getElementById('gmaCatTabs').addEventListener('click', function (e) {
+                var btn = e.target.closest('.gma-ct');
+                if (!btn) return;
+                document.querySelectorAll('.gma-ct').forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                curCat = btn.getAttribute('data-cat');
+                curIdx = IS_MOBILE ? -1 : 0;
+                renderList();
+            });
+
+            /* ── Resize ── */
+            window.addEventListener('resize', function () {
+                var wasMobile = IS_MOBILE;
+                checkMobile();
+                if (wasMobile !== IS_MOBILE) {
+                    curIdx = IS_MOBILE ? -1 : 0;
+                    renderList();
+                }
+            });
+
+            /* ── Init ── */
+            curIdx = IS_MOBILE ? -1 : 0;
+            renderList();
+
+
+            /* ════ BOOKING POPUP ════ */
+            window.gmaOpenBook = function (title, price) {
+                curTitle = title || curTitle;
+                curPrice = price || curPrice;
+                document.getElementById('gmaChip').textContent = curTitle || 'Selected Service';
+                document.getElementById('gmaChipPrice').innerHTML = '&#8377;' + curPrice + ' — Labour Charge';
+                document.getElementById('gmaBookOverlay').classList.add('gma-open');
                 document.body.style.overflow = 'hidden';
-            }
-
-            function gmpClose() {
-                document.getElementById('gmpOverlay').classList.remove('gmp-show');
-                document.body.style.overflow = '';
-            }
-
-            document.getElementById('gmpClose').onclick = gmpClose;
-            document.getElementById('gmpOverlay').onclick = function (e) {
-                if (e.target === this) gmpClose();
             };
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') gmpClose();
-            });
-            document.addEventListener('click', function (e) {
-                var t = e.target.closest('.gmp-trigger');
-                if (!t) return;
-                e.preventDefault();
-                gmpOpen(t.getAttribute('data-cat'));
+
+            window.gmaCloseBook = function () {
+                document.getElementById('gmaBookOverlay').classList.remove('gma-open');
+                document.body.style.overflow = '';
+            };
+
+            document.getElementById('gmaBookOverlay').addEventListener('click', function (e) {
+                if (e.target === this) window.gmaCloseBook();
             });
 
-            // ✅ YE LINE ADD KARO - global access ke liye
-            window.gmpOpen = gmpOpen;
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') window.gmaCloseBook();
+            });
+
+            /* ── WhatsApp Send ── */
+            window.gmaSendWA = function () {
+                var name = document.getElementById('gmaName').value.trim();
+                var phone = document.getElementById('gmaPhone').value.trim();
+                var address = document.getElementById('gmaAddress').value.trim();
+                var date = document.getElementById('gmaDate').value;
+                var time = document.getElementById('gmaTime').value;
+                var note = document.getElementById('gmaNote').value.trim();
+
+                if (!name || !phone || !address) {
+                    alert('Please fill Name, Phone and Address before sending.');
+                    return;
+                }
+
+                var msg = '\uD83D\uDD27 *New Service Booking \u2014 GrowMore Appliances*\n\n'
+                    + '*Service:* ' + curTitle + '\n'
+                    + '*Labour Charge:* \u20B9' + curPrice + '\n\n'
+                    + '*Customer Details:*\n'
+                    + '\uD83D\uDC64 Name: ' + name + '\n'
+                    + '\uD83D\uDCDE Phone: ' + phone + '\n'
+                    + '\uD83D\uDCCD Address: ' + address + '\n'
+                    + '\uD83D\uDCC5 Date: ' + (date || 'Not specified') + '\n'
+                    + '\u23F0 Time: ' + time
+                    + (note ? '\n\uD83D\uDCDD Note: ' + note : '');
+
+                var waNumber = '919711162790'; /* ← apna WhatsApp number */
+                window.open('https://wa.me/' + waNumber + '?text=' + encodeURIComponent(msg), '_blank');
+                window.gmaCloseBook();
+            };
 
         })();
     </script>
-    <!-- Our Projects End -->
+    <!-- ═══ GMA SERVICE EXPLORER END ═══ -->
+
+    <!-- booking popup end -->
 
     <!-- Why Choose Us Section Start -->
     <div class="why-choose-us dark-section">
@@ -766,7 +1253,8 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">why choose us</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Why trust us for your mobile & computer repairs</h2>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">Why trust us for your home appliance
+                            repairs & services</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -790,29 +1278,29 @@
                                 <img src="images/icon-why-choose-item-1.svg" alt="">
                             </div>
                             <div class="why-choose-item-content">
-                                <h3>Fast and Efficient Service</h3>
+                                <h3>Same Day Service Available</h3>
                             </div>
                         </div>
                         <!-- Why Choose Item End -->
-                        
+
                         <!-- Why Choose Item Start -->
                         <div class="why-choose-item wow fadeInUp" data-wow-delay="0.2s">
                             <div class="icon-box">
                                 <img src="images/icon-why-choose-item-2.svg" alt="">
                             </div>
                             <div class="why-choose-item-content">
-                                <h3>High-Quality Parts Guaranteed</h3>
+                                <h3>Genuine Spare Parts Used</h3>
                             </div>
                         </div>
                         <!-- Why Choose Item End -->
-                        
+
                         <!-- Why Choose Item Start -->
                         <div class="why-choose-item wow fadeInUp" data-wow-delay="0.4s">
                             <div class="icon-box">
                                 <img src="images/icon-why-choose-item-3.svg" alt="">
                             </div>
                             <div class="why-choose-item-content">
-                                <h3>Wide Range of Repair Services</h3>
+                                <h3>All Major Brands Serviced</h3>
                             </div>
                         </div>
                         <!-- Why Choose Item End -->
@@ -823,14 +1311,14 @@
                                 <img src="images/icon-why-choose-item-4.svg" alt="">
                             </div>
                             <div class="why-choose-item-content">
-                                <h3>Customer Satisfaction is Our Priority</h3>
+                                <h3>Transparent & Fixed Pricing</h3>
                             </div>
                         </div>
                         <!-- Why Choose Item End -->
                     </div>
                     <!-- Why Choose Item Box End -->
                 </div>
-                    
+
                 <div class="col-lg-6">
                     <!-- Why Choose Image Start -->
                     <div class="why-choose-image">
@@ -840,7 +1328,8 @@
 
                         <!-- Video Play Button Start -->
                         <div class="video-play-button">
-                            <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">
+                            <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
+                                data-cursor-text="Play">
                                 <i class="fa-solid fa-play"></i>
                             </a>
                         </div>
@@ -854,8 +1343,16 @@
                     <div class="why-choose-content">
                         <!-- Why Choose Description Start -->
                         <div class="why-choose-disc">
-                            <p class="wow fadeInUp"><span>"We provide reliable and efficient repair services for mobiles and computers. With certified technicians, genuine parts, and transparent pricing, we prioritize your satisfaction and device security."</span></p>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">At our repair center, we prioritize your trust and satisfaction. Our team of certified technicians is dedicated to providing high-quality repairs for both mobile devices and computers. We use only genuine replacement parts to ensure the longevity and performance of your devices. With transparent pricing, quick turnaround times, and exceptional customer support, we make the repair process hassle-free and reliable. Your device's security and functionality are our top priorities, giving you peace of mind with every repair.</p>
+                            <p class="wow fadeInUp"><span>"We provide fast and reliable repair services for all your
+                                    home appliances. With trained technicians, genuine parts, and honest pricing, your
+                                    appliance is always in safe hands."</span></p>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">At GrowMore Appliances, we understand how
+                                important your home appliances are to your daily life. Our team of skilled and
+                                experienced technicians handles everything from AC servicing and washing machine repairs
+                                to refrigerator gas refilling and geyser installation. We work with all major brands
+                                including LG, Samsung, Whirlpool, Daikin, Voltas, and more. With doorstep service, fixed
+                                labour charges, and no hidden costs, we make appliance repair simple, affordable, and
+                                stress-free.</p>
                         </div>
                         <!-- Why Choose Description End -->
 
@@ -863,22 +1360,22 @@
                         <div class="why-choose-counter-list">
                             <!-- Why Choose Counter Item Start -->
                             <div class="why-choose-counter-item">
-                                <h2><span class="counter">25</span>+</h2>
+                                <h2><span class="counter">8</span>+</h2>
                                 <p>Years of Experience</p>
                             </div>
                             <!-- Why Choose Counter Item End -->
 
                             <!-- Why Choose Counter Item Start -->
                             <div class="why-choose-counter-item">
-                                <h2><span class="counter">10</span>K+</h2>
-                                <p>Mobile Computer Repair</p>
+                                <h2><span class="counter">15</span>K+</h2>
+                                <p>Appliances Repaired</p>
                             </div>
                             <!-- Why Choose Counter Item End -->
 
                             <!-- Why Choose Counter Item Start -->
                             <div class="why-choose-counter-item">
-                                <h2><span class="counter">16</span>K</h2>
-                                <p>Happy Customer</p>
+                                <h2><span class="counter">12</span>K</h2>
+                                <p>Happy Customers</p>
                             </div>
                             <!-- Why Choose Counter Item End -->
                         </div>
@@ -894,15 +1391,17 @@
     <!-- What We Do Section Start -->
     <div class="what-we-do">
         <div class="container">
-            <div class="row align-items-center">                
+            <div class="row align-items-center">
                 <div class="col-lg-6">
                     <!-- What We Do Content Start -->
                     <div class="what-we-do-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">what we do</h3>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Quality repairs for devices you rely on</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">We provide reliable and high-quality repairs for all your essential devices, phones to computers. Our expert technicians ensure your devices.</p>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Expert appliance care for every home
+                            </h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">From AC jet service to geyser installation, we
+                                cover all your home appliance needs with professional technicians at your doorstep.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -910,15 +1409,19 @@
                         <div class="what-do-body-list">
                             <!-- About Body Item Start -->
                             <div class="what-do-body-item wow fadeInUp" data-wow-delay="0.4s">
-                                <h3>Computer Repair and Upgrades</h3>
-                                <p>Whether it's a slow computer or a hardware upgrade, we handle everything from software fixes to performance boosts.</p>
+                                <h3>AC, Refrigerator & Washing Machine Repair</h3>
+                                <p>Whether it's an AC not cooling, a washing machine not spinning, or a refrigerator not
+                                    maintaining temperature — our technicians diagnose and fix the issue quickly with
+                                    genuine spare parts.</p>
                             </div>
                             <!-- About Body Item End -->
-                            
+
                             <!-- About Body Item Start -->
                             <div class="what-do-body-item wow fadeInUp" data-wow-delay="0.6s">
-                                <h3>Device Protection Solutions</h3>
-                                <p>Whether it's a slow computer or a hardware upgrade, we handle everything from software fixes to performance boosts.</p>
+                                <h3>Geyser, Chimney & LED TV Services</h3>
+                                <p>We handle geyser installation, tank cleaning, chimney deep cleaning, and LED TV
+                                    repairs for all screen sizes — all at transparent, fixed prices with no surprise
+                                    charges.</p>
                             </div>
                             <!-- About Body Item End -->
                         </div>
@@ -935,7 +1438,7 @@
                         </figure>
 
                         <div class="years-experience">
-                            <h2><span class="counter">25</span>+</h2>
+                            <h2><span class="counter">8</span>+</h2>
                             <p>Years Experience</p>
                         </div>
                     </div>
@@ -954,7 +1457,8 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">testimonials</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Hear from our satisfied customer today</h2>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">What our customers say about our service
+                        </h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -962,7 +1466,7 @@
                 <div class="col-lg-6">
                     <!-- Service Button Start -->
                     <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
-                        <a href="testimonials.html" class="btn-default btn-highlighted">View All Review</a>
+                        <a href="testimonials.html" class="btn-default btn-highlighted">View All Reviews</a>
                     </div>
                     <!-- Service Button End -->
                 </div>
@@ -974,6 +1478,7 @@
                     <div class="testimonial-slider">
                         <div class="swiper">
                             <div class="swiper-wrapper" data-cursor-text="Drag">
+
                                 <!-- Testimonial Slide Start -->
                                 <div class="swiper-slide">
                                     <div class="testimonial-item">
@@ -983,10 +1488,10 @@
                                                     <figure class="image-anime">
                                                         <img src="images/author-1.jpg" alt="">
                                                     </figure>
-                                                </div>            
+                                                </div>
                                                 <div class="author-content">
-                                                    <h3>Jenny Wilson</h3>
-                                                    <p>Lead Technician</p>
+                                                    <h3>Rajesh Kumar</h3>
+                                                    <p>Sector 5, Meerut</p>
                                                 </div>
                                             </div>
                                             <div class="testimonial-rating">
@@ -997,14 +1502,15 @@
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
                                         </div>
-                                        
                                         <div class="testimonial-content">
-                                            <p>"Fantastic service! My phone screen was cracked & they had it fixed in no time. Professional, friendly & affordable recommend Amazing experience! They recovered all my data after my laptop crashed. The team was so helpful clearly. 5 stars!"</p>
-                                        </div>                                        
+                                            <p>"My split AC was not cooling at all in peak summer. GrowMore sent a
+                                                technician within 2 hours. He did a full jet service and gas top-up — AC
+                                                is working perfectly now. Very professional and honest pricing!"</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Testimonial Slide End -->
-                                
+
                                 <!-- Testimonial Slide Start -->
                                 <div class="swiper-slide">
                                     <div class="testimonial-item">
@@ -1014,10 +1520,10 @@
                                                     <figure class="image-anime">
                                                         <img src="images/author-2.jpg" alt="">
                                                     </figure>
-                                                </div>            
+                                                </div>
                                                 <div class="author-content">
-                                                    <h3>Annette Black</h3>
-                                                    <p>hardware Technician</p>
+                                                    <h3>Priya Sharma</h3>
+                                                    <p>Shastri Nagar, Meerut</p>
                                                 </div>
                                             </div>
                                             <div class="testimonial-rating">
@@ -1028,10 +1534,12 @@
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
                                         </div>
-                                        
                                         <div class="testimonial-content">
-                                            <p>"Fantastic service! My phone screen was cracked & they had it fixed in no time. Professional, friendly & affordable recommend Amazing experience! They recovered all my data after my laptop crashed. The team was so helpful clearly. 5 stars!"</p>
-                                        </div>                                        
+                                            <p>"Our Samsung front load washing machine stopped draining water. The
+                                                GrowMore technician came the same day, cleaned the filter and fixed the
+                                                drain pump. Excellent service at a very reasonable price. Highly
+                                                recommended!"</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Testimonial Slide End -->
@@ -1045,10 +1553,10 @@
                                                     <figure class="image-anime">
                                                         <img src="images/author-3.jpg" alt="">
                                                     </figure>
-                                                </div>            
+                                                </div>
                                                 <div class="author-content">
-                                                    <h3>Mark Robinson</h3>
-                                                    <p>Repair Specialist</p>
+                                                    <h3>Amit Verma</h3>
+                                                    <p>Civil Lines, Meerut</p>
                                                 </div>
                                             </div>
                                             <div class="testimonial-rating">
@@ -1059,10 +1567,12 @@
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
                                         </div>
-                                        
                                         <div class="testimonial-content">
-                                            <p>"Fantastic service! My phone screen was cracked & they had it fixed in no time. Professional, friendly & affordable recommend Amazing experience! They recovered all my data after my laptop crashed. The team was so helpful clearly. 5 stars!"</p>
-                                        </div>                                        
+                                            <p>"Got my 25-litre geyser tank deep cleaned and reinstalled at a new
+                                                location. The work was clean, quick and the technician explained
+                                                everything clearly. No hidden charges. Will definitely call GrowMore
+                                                again!"</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Testimonial Slide End -->
@@ -1076,10 +1586,10 @@
                                                     <figure class="image-anime">
                                                         <img src="images/author-4.jpg" alt="">
                                                     </figure>
-                                                </div>            
+                                                </div>
                                                 <div class="author-content">
-                                                    <h3>Ava Thompson</h3>
-                                                    <p>Mobile Technician</p>
+                                                    <h3>Sunita Agarwal</h3>
+                                                    <p>Pallavpuram, Meerut</p>
                                                 </div>
                                             </div>
                                             <div class="testimonial-rating">
@@ -1090,13 +1600,16 @@
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
                                         </div>
-                                        
                                         <div class="testimonial-content">
-                                            <p>"Fantastic service! My phone screen was cracked & they had it fixed in no time. Professional, friendly & affordable recommend Amazing experience! They recovered all my data after my laptop crashed. The team was so helpful clearly. 5 stars!"</p>
-                                        </div>                                        
+                                            <p>"Our double door refrigerator was not cooling properly. GrowMore's
+                                                technician diagnosed a gas leak, refilled it and also checked the
+                                                thermostat. Fridge is working like new now. Great service, very
+                                                trustworthy team!"</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Testimonial Slide End -->
+
                             </div>
                             <div class="testimonial-pagination"></div>
                         </div>
@@ -1118,8 +1631,10 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">FAQ's</h3>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Answers to your common questions</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Find clear and concise answers to the most frequently asked questions about our computer and mobile repair services.</p>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Answers to your common appliance repair
+                                questions</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Find clear answers to the most frequently
+                                asked questions about our home appliance repair and service process.</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -1133,7 +1648,7 @@
                                     <i class="fa-solid fa-star"></i>
                                 </div>
                                 <!-- Review Rating Box End -->
-                                
+
                                 <!-- Review Client Box Start -->
                                 <div class="hero-client-box">
                                     <!-- Review Image Start -->
@@ -1160,10 +1675,10 @@
                                         </div>
                                     </div>
                                     <!-- Testimonial Review Image End -->
-    
+
                                     <!-- Satisfy Client Box Start -->
                                     <div class="hero-client-content">
-                                        <p>Our Customer Review</p>
+                                        <p>Our Customer Reviews</p>
                                     </div>
                                 </div>
                                 <!-- Review Client Box End -->
@@ -1172,7 +1687,7 @@
 
                             <!-- FAQs Review Footer Start -->
                             <div class="faqs-review-footer">
-                                <a href="tel:+125125025"><i class="fa-solid fa-phone"></i> +91 - 125-125-025</a>
+                                <a href="tel:+919711162790"><i class="fa-solid fa-phone"></i> +91 - 97111 62790</a>
                             </div>
                             <!-- FAQs Review Footer End -->
                         </div>
@@ -1180,20 +1695,25 @@
                     </div>
                     <!-- FAQ Content End -->
                 </div>
-                
+
                 <div class="col-lg-6">
                     <!-- FAQ Accordion Start -->
                     <div class="faq-accordion" id="faqaccordion">
+
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp">
                             <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                    How long does a typical repair take?
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    How quickly can a technician visit my home?
                                 </button>
                             </h2>
-                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#faqaccordion">
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                data-bs-parent="#faqaccordion">
                                 <div class="accordion-body">
-                                    <p>Yes, we use high-quality and original parts to ensure the best performance and durability of your devices.</p>
+                                    <p>In most cases our technician visits within 2–4 hours of booking. We offer
+                                        same-day service for AC, washing machine, refrigerator, geyser, and other
+                                        appliance repairs across Meerut.</p>
                                 </div>
                             </div>
                         </div>
@@ -1202,13 +1722,17 @@
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
                             <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                    Do you use original parts for replacements?
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    Do you charge extra for home visit?
                                 </button>
                             </h2>
-                            <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2" data-bs-parent="#faqaccordion">
+                            <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2"
+                                data-bs-parent="#faqaccordion">
                                 <div class="accordion-body">
-                                    <p>Yes, we use high-quality and original parts to ensure the best performance and durability of your devices.</p>
+                                    <p>No, there is no separate home visit charge. You only pay the fixed labour charge
+                                        for the service you book. All our prices are transparent with no hidden fees.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1217,28 +1741,36 @@
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
                             <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                    Is there a warranty on repairs?
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    Which brands do you service?
                                 </button>
                             </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqaccordion">
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                                data-bs-parent="#faqaccordion">
                                 <div class="accordion-body">
-                                    <p>Yes, we use high-quality and original parts to ensure the best performance and durability of your devices.</p>
+                                    <p>We service all major brands including LG, Samsung, Whirlpool, Voltas, Daikin,
+                                        Hitachi, Godrej, Haier, Lloyd, IFB, and more — for AC, washing machine,
+                                        refrigerator, geyser, microwave, LED TV and chimney.</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- FAQ Item End -->    
+                        <!-- FAQ Item End -->
 
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
                             <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    Can I get a repair estimate before visiting?
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    Is there any warranty on the repair work?
                                 </button>
                             </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqaccordion">
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                                data-bs-parent="#faqaccordion">
                                 <div class="accordion-body">
-                                    <p>Yes, we use high-quality and original parts to ensure the best performance and durability of your devices.</p>
+                                    <p>Yes, we provide a service warranty on all repair and installation work. If the
+                                        same issue recurs within the warranty period, our technician will revisit and
+                                        fix it at no extra cost.</p>
                                 </div>
                             </div>
                         </div>
@@ -1247,17 +1779,22 @@
                         <!-- FAQ Item Start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
                             <h2 class="accordion-header" id="heading5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                    Do you offer on-site repair services?
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    How do I book a service with GrowMore Appliances?
                                 </button>
                             </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#faqaccordion">
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                                data-bs-parent="#faqaccordion">
                                 <div class="accordion-body">
-                                    <p>Yes, we use high-quality and original parts to ensure the best performance and durability of your devices.</p>
+                                    <p>Booking is very easy! Simply click the "Book This Service" button on any service
+                                        page, fill in your name, phone number, address and preferred time slot — and we
+                                        will confirm your appointment via WhatsApp instantly.</p>
                                 </div>
                             </div>
                         </div>
                         <!-- FAQ Item End -->
+
                     </div>
                     <!-- FAQ Accordion End -->
                 </div>
@@ -1265,7 +1802,7 @@
         </div>
     </div>
     <!-- Our FAQs Section End -->
-    
+
     <!-- Footer Main Start -->
     <footer class="main-footer dark-section">
         <div class="container">
@@ -1431,7 +1968,7 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <!-- Isotop js file -->
-	<script src="js/isotope.min.js"></script>
+    <script src="js/isotope.min.js"></script>
     <!-- Magnific js file -->
     <script src="js/jquery.magnific-popup.min.js"></script>
     <!-- SmoothScroll -->
@@ -1453,4 +1990,5 @@
 </body>
 
 <!-- Mirrored from html.awaikenthemes.com/repairit/services.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Apr 2026 18:38:56 GMT -->
+
 </html>

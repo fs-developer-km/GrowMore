@@ -123,12 +123,12 @@
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
                         <h1 class="text-anime-style-3" data-cursor="-opaque">Contact us</h1>
-                        <nav class="wow fadeInUp">
+                        <!-- <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index-2.html">home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">contact us</li>
                             </ol>
-                        </nav>
+                        </nav> -->
                     </div>
                     <!-- Page Header Box End -->
                 </div>
@@ -137,7 +137,7 @@
     </div>
     <!-- Page Header End -->
 
-    <!-- Page Contact Us Start -->
+<!-- Page Contact Us Start -->
     <div class="page-contact-us">
         <div class="container">
             <div class="row">
@@ -167,7 +167,7 @@
                                     <!-- Contact Item Content Start -->
                                     <div class="contact-item-content">
                                         <p>contact us</p>
-                                        <h3><a href="tel:761853398">+(1) 761-853-398</a></h3>
+                                        <h3><a href="tel:+919711162790">+91 97111 62790</a></h3>
                                     </div>
                                     <!-- Contact Item Content End -->
                                 </div>
@@ -184,7 +184,10 @@
                                     <!-- Contact Item Content Start -->
                                     <div class="contact-item-content">
                                         <p>email us</p>
-                                        <h3><a href="mailto:info@domain.com">info@domain.com</a></h3>
+                                        <h3>
+                                            <a href="mailto:appliancesgrowmore050@gmail.com">appliancesgrowmore050@gmail.com</a><br>
+                                            <a href="mailto:anuj.singh1785@gmail.com">anuj.singh1785@gmail.com</a>
+                                        </h3>
                                     </div>
                                     <!-- Contact Item Content End -->
                                 </div>
@@ -201,7 +204,7 @@
                                     <!-- Contact Item Content Start -->
                                     <div class="contact-item-content">
                                         <p>location</p>
-                                        <h3>6985  SW1A 1AA United Kingdom</h3>
+                                        <h3>UGF 5, Prem Plaza, Rajnagar Extension, Ghaziabad - 201017</h3>
                                     </div>
                                     <!-- Contact Item Content End -->
                                 </div>
@@ -233,7 +236,7 @@
                                         </div>
     
                                         <div class="form-group col-md-6 mb-4">
-                                            <input type="email" name ="email" class="form-control" id="email" placeholder="Email" required>
+                                            <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
                                             <div class="help-block with-errors"></div>
                                         </div>
     
@@ -253,6 +256,12 @@
                                         </div>
                                     </div>
                                 </form>
+
+                                <!-- Success Message (hidden by default, shown after submit) -->
+                                <div id="formSuccess" style="display:none; margin-top: 20px; padding: 18px 24px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; text-align: center;">
+                                    <p style="margin: 0; font-size: 16px; color: #15803d; font-weight: 600;">&#10003; Message Sent Successfully!</p>
+                                    <p style="margin: 8px 0 0; font-size: 14px; color: #166534;">Thank you for reaching out. Our team will get back to you shortly.</p>
+                                </div>
                             </div>
                         </div>
                         <!-- Contact Us Form End -->
@@ -271,7 +280,7 @@
                 <div class="col-lg-12">
                     <!-- Google Map IFrame Start -->
                     <div class="google-map-iframe">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96737.10562045308!2d-74.08535042841811!3d40.739265258395164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1703158537552!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.868433804046!2d77.45055187550966!3d28.65784678427508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1aae8f25765%3A0x3b3ac3e4d6019a5f!2sRajnagar%20Extension%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201017!5e0!3m2!1sen!2sin!4v1714034000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <!-- Google Map IFrame End -->
                 </div>
@@ -279,6 +288,44 @@
         </div>
     </div>
     <!-- Google Map Section End -->
+
+    <!-- Form Submit Script -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var fname   = document.getElementById('fname').value.trim();
+            var lname   = document.getElementById('lname').value.trim();
+            var email   = document.getElementById('email').value.trim();
+            var phone   = document.getElementById('phone').value.trim();
+            var message = document.getElementById('message').value.trim();
+
+            if (!fname || !lname || !email || !phone) {
+                return; // let browser handle required validation
+            }
+
+            // Save submission to localStorage as simple CRM log
+            var submissions = JSON.parse(localStorage.getItem('crm_leads') || '[]');
+            submissions.push({
+                id:        Date.now(),
+                date:      new Date().toLocaleString('en-IN'),
+                firstName: fname,
+                lastName:  lname,
+                email:     email,
+                phone:     phone,
+                message:   message,
+                status:    'New'
+            });
+            localStorage.setItem('crm_leads', JSON.stringify(submissions));
+
+            // Hide form, show success message
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+
+            // Scroll success message into view
+            document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
     
     <!-- Footer Main Start -->
     <footer class="main-footer dark-section">
